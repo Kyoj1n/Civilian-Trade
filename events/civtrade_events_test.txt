@@ -6,5 +6,119 @@
 #
 ############################
 
-namespace = civtrade
+namespace = civtradetest
 
+planet_event = {
+	id = civtradetest.1
+	hide_window = yes
+	location = ROOT
+	
+	trigger = {
+		owner = {is_country_type = default
+		}
+	}
+	is_triggered_only = yes
+	immediate = {
+			random_country = {
+				limit = {
+					is_country_type = default
+					}
+					create_leader = {
+						type = admiral
+						name = random
+						skill = 100
+					}
+			}				
+			create_fleet = { name = "Civilian Trade Fleet" }
+				
+				last_created_fleet = {
+							set_owner = root.owner
+							set_fleet_stance = evasive
+							save_event_target_as = trade_fleet
+							if = {
+								random_list = { 
+									50 = { create_ship_design = {
+										design = "T1" 
+									   ftl = warp
+										}
+									}
+									50 = {  create_ship_design = {
+										design = "T2" 
+									   ftl = warp
+										}
+									}
+								}
+							}
+							
+							create_ship = {
+								name = random
+								design = last_created_design
+								graphical_culture = "pirate_01"
+							}
+							
+							assign_leader = last_created_leader
+							set_location = ROOT
+								queue_actions = {																																																																		
+										find_random_system = {
+											trigger = {
+												id = "civtradetest.1.trigger.1"
+												distance = {
+													source = PREV
+													max_distance = 30
+													min_distance = 0
+												}	
+											}		
+
+											found_system = {
+													move_to = THIS
+												}
+											}	
+											find_random_planet = {
+													trigger = {
+														id = "civtradetest.1.trigger.2"
+														is_star = yes
+													}																	
+													found_planet = {
+														orbit_planet = THIS 
+														wait = {
+															duration = 10
+															}
+															
+														effect = {
+															id = civtradetest.1.effect.1
+																event_target:trade_fleet = {
+																	set_fleet_flag = delivered														
+																}
+															
+															}
+														}												
+											}																																																																																
+								}
+				}					
+				
+					
+	}
+			
+}
+
+
+fleet_event = {
+	id = civtradetest.2
+	hide_window= yes
+	
+	trigger = {
+		or = {
+			has_fleet_flag = delivered
+			any_ship = {
+					or = {
+						is_ship_size = civilian_trade_freighter
+						is_ship_size = civilian_trade_tanker
+					}
+				has_fleet_order = no
+			}
+		}
+		
+	}
+	immediate = { delete_fleet = this }
+	
+}
