@@ -1,0 +1,160 @@
+﻿l_french:
+
+ 
+ #############################
+ # Civilian Trade Events
+ #############################
+ 
+ 
+ civtrade.1.name:0 "Commerce Civil"
+ civtrade.1.desc:0 "Forts du succès de la première colonie [Root.Owner.GetSpeciesName] , un petit groupe d'entrepreneurs de [Root.Capital.GetName] a ouvert la voie au commerce interplanétaire. Qu'ils soient sagaces ou hardis... Nul ne le sait. \n\nC'est un jour mémorable pour toute l'espèce [Root.Owner.GetName] qui a marqué le pas d'une future civilisation dont l'histoire s'écrira dans les étoiles."
+ # Options
+ civtrade.1.a:0 "Que la foi puisse leur éclairé le chemin."
+ civtrade.1.b:0 "Vos papiers sont valides. Partez!"
+ civtrade.1.c:0 "Des actions indépendantes supposent une pénsée indépendante: attention à votre orgueil.."
+ civtrade.1.d:0 "Le développement fait par soi-meme est un signe de grand travail personel."  
+ civtrade.1.e:0 "Vos tentatives d'entreprise indépendante ne seront pas tolérés."  
+ civtrade.1.f:0 "Tant que vous payerez vos impots et frets de douane tout ira bien."  
+ civtrade.1.g:0 "La liberté de mouvement et de commerce sont la base de notre société."
+ civtrade.1.h:0 "Vos papiers sont valides. Partez!"
+ 
+ civ.1.name:0 "Le plus grand spectacle sur toute la Terre!"
+ civ.1.desc:0 "Après avoir écumé les confins de l'espace connu et inconnus, le grand Kemplerer a récemment dévoilé son magnifique vaisseau de cirque Rosette! \n\nRempli à ras bord de choses inédites et mystérieuses pour les passagers de tout âge et de tout espéce. \n\nChaque fois que Kemplerer et son Rosette sont dans le système assurez-vous de venir à bord pour le plus grand Gala de la Galaxie!"
+ # Options
+ civ.1.a:0 "Que le spectacle commence!"
+ 
+ civmenu.1.name:0 "[ROOT.GetName] Centre Commercial"
+ civmenu.1.desc:0 "Dire à nos gestionnaires d'acheter : \n\n     Minéraux  \n\n     Crédits énergétiques \n\n     Nourritures"
+ 
+ # Options
+ civmenu.1.a:0 "Faire en sorte."
+ 
+ 
+ #############################
+ # Civilian Trade modifiers
+ #############################
+ 
+ 
+ expanded_trade_network:0 "Réseau commercial élargi"
+ expanded_trade_network_desc:0 "Avec l'augmentation de la capacité et l'infrastructure, cette planète peut tirer le meilleur parti de ses commerçants."
+ trade_network:0 "Réseau commercial"
+ trade_network_desc:0 "Les commerçants intergalactiques ont récemment fait un arrêt sur cette planète, fournissant un petit coup de pouce à son économie."
+ trade_network_minerals:0 "Réseau commercial"
+ trade_network_minerals_desc:0 "Les commerçants intergalactiques ont récemment fait un arrêt sur cette planète, fournissant un petit coup de pouce à son économie."
+ trade_network_energy:0 "Réseau commercial"
+ trade_network_energy_desc:0 "Les commerçants intergalactiques ont récemment fait un arrêt sur cette planète, fournissant un petit coup de pouce à son économie."  
+ trade_network_food:0 "Réseau commercial"
+ trade_network_food_desc:0 "Les commerçants intergalactiques ont récemment fait un arrêt sur cette planète, fournissant un petit coup de pouce à son économie."
+ 
+ reduced_trade_network:0 "Réseau commercial affaibli"
+ reduced_trade_network_desc:0 "Avec l'augmentation de la capacité et l'infrastructure, cette planète peut tirer le meilleur parti de ses commerçants. Cet effet a été réduit en raison des sanctions commerciales récentes."
+ reduced_trade_network_minerals:0 "Réseau commercial affaibli"
+ reduced_trade_network_minerals_desc:0 "Les commerçants intergalactiques ont récemment fait un arrêt sur cette planète, fournissant un petit coup de pouce à son économie. Cet effet a été réduit en raison des sanctions commerciales récentes."
+ reduced_trade_network_energy:0 "Réseau commercial affaibli"
+ reduced_trade_network_energy_desc:0 "Les commerçants intergalactiques ont récemment fait un arrêt sur cette planète, fournissant un petit coup de pouce à son économie. Cet effet a été réduit en raison des sanctions commerciales récentes."  
+ reduced_trade_network_food:0 "Réseau commercial affaibli"
+ reduced_trade_network_food_desc:0 "Les commerçants intergalactiques ont récemment fait un arrêt sur cette planète, fournissant un petit coup de pouce à son économie. Cet effet a été réduit en raison des sanctions commerciales récentes."
+ 
+ trade_minerals_focus:0 "Cibler les minéraux"
+ trade_minerals_focus_desc:0 "Ce réseau de commerce des colonies se concentre sur l'achat de minéraux."
+ trade_energy_focus:0 "Cibler les crédits énergétiques"
+ trade_energy_focus_desc:0 "Ce réseau de commerce des colonies se concentre sur l'achat de crédits énergétiques"
+ trade_food_focus:0 "Cibler la nourritures"
+ trade_food_focus_desc:0 "Ce réseau de commerce des colonies se concentre sur l'achat de nourriture."
+ 
+ circus_in_town:0 "Vaisseau de cirque dans le système"
+ circus_in_town_desc: "Allez venez tous! Le grand Kemplerer Circus est dans le système. Montez à bord voir des créatures et des attractions terrifiantes errer dans la Rosette!"
+ 
+ #############################
+ # Civilian Trade personality
+ #############################
+ 
+ personality_civilian_traders:0 "Commerce Civil"
+ personality_civilian_traders_desc:0 "Des commerçants civils font leurs tournées à travers votre empire cherchant toujours a vendre."
+ 
+ ####################################
+ # Edicts
+ ####################################
+ 
+ # Planet Edicts
+ 
+ edict_trade_hub:0 "Hub commercial"
+ edict_trade_hub_desc:0 "Fournis une quantité convenable d'équipements de l'espace, cette planète attire un plus grand nombre de commerçants que la plupart des planètes, étant ainsi en mesure de tirer profit de leur présence."
+ 
+ edict_change_trade_focus:0 "Changer la planète en cible commercial"
+ edict_change_trade_focus:0 "demandez aux gestionnaires à acheter des ressources spécifiques aux commerçants."
+ 
+ # Country Edicts
+ 
+ edict_trade_subsidies:0 "Subventions commerciales"
+ edict_trade_subsidies_desc:0 "Sentant la nécessité de donner à vos commerçants un coup de main pour commencer a vous aider à démarrer, des commerces seront construits plus fréquemment."
+ 
+ ####################################
+ # Policies
+ ####################################
+ 
+ policy_civilian_trade:0 "Commerce Civil"
+ policy_civilian_trade_desc:0 "Selon votre efficacité a géré le commerce, les commerçants produiront plus ou moins."
+ 
+ unrestricted_trade:0 "Libre"
+ unrestricted_trade_name: "Commerce libre"
+ unrestricted_trade_desc:0 "préférant laisser les marchés échangés librement, vous laissez les commerçants décider de leurs limites."
+ 
+ restricted_trade:0 "Limité"
+ restricted_trade_name:0 "Commerce Limité"
+ restricted_trade_desc:0 "Trop de liberté de mouvement du commerce est mauvaise pour l'empire. Pas de nouveaux commerçants sont autorisés et les commerçants opérant actuellement vont lentement être mis hors-service."
+ 
+ ####################################
+ # Hull Sizes
+ ####################################  
+ 
+ civilian_trade_freighter:0 "Cargo Civil"
+ civilian_trade_freighter_plural:0 "Cargos Civil"
+ civilian_trade_tanker:0 "Pétrolier Civil"
+ civilian_trade_tanker_plural:0 "Pétroliers Civil"
+ 
+ ####################################
+ # Technologies
+ ####################################  
+ 
+ tech_trade_facilities_one:0 "Installations commerciales I"
+ tech_trade_facilities_one_desc:0 "En mettant des ressources supplémentaires dans les installations publiques et les coûts administratifs, nous pouvons augmenter la quantité de commerçants que nos civils peuvent envoyer."
+ tech_trade_facilities_two:0 "Installations commerciales II"
+ tech_trade_facilities_two_desc:0 "En mettant des ressources supplémentaires dans les installations publiques et les coûts administratifs, nous pouvons augmenter la quantité de commerçants que nos civils peuvent envoyer."
+ tech_trade_facilities_three:0 "Installations commerciales III"
+ tech_trade_facilities_three_desc:0 "En mettant des ressources supplémentaires dans les installations publiques et les coûts administratifs, nous pouvons augmenter la quantité de commerçants que nos civils peuvent envoyer."
+ 
+ TECH_UNLOCK_TRADE_FACILITIES_ONE_TITLE:0 "§HUnlocks Max Traders:§! 10 Commerçants"
+ TECH_UNLOCK_TRADE_FACILITIES_ONE_DESC:0 "§HMore Traders§!\nNous permet d'augmenter le nombre de navires de commerce à la disposition de nos civils."
+ TECH_UNLOCK_TRADE_FACILITIES_TWO_TITLE:0 "§HUnlocks Max Traders:§! 20 Commerçants"
+ TECH_UNLOCK_TRADE_FACILITIES_TWO_DESC:0 "§HMore Traders§!\nNous permet d'augmenter le nombre de navires de commerce à la disposition de nos civils."
+ TECH_UNLOCK_TRADE_FACILITIES_THREE_TITLE:0 "§HUnlocks Max Traders:§! 30 Commerçants"
+ TECH_UNLOCK_TRADE_FACILITIES_THREE_DESC:0 "§HMore Traders§!\nNous permet d'augmenter le nombre de navires de commerce à la disposition de nos civils."
+ 
+ TECH_UNLOCK_TRADE_HUB_TITLE:0 "§HUnlocks Planetary Edict:§! Hub commercial"
+ TECH_UNLOCK_TRADE_HUB_DESC:0 "§HTrade Hub§!\nFournis une quantité convenable d'équipements de l'espace, cette planète attire un plus grand nombre de commerçants que la plupart des planètes, étant ainsi en mesure de tirer profit de leur présence."
+ 
+ ####################################
+ # Subjects
+ ####################################
+ 
+ SUBJECT_traders:0 "Commerce Civil"
+ SUBJECT_DESC_traders:0 "Les membres de votre population qui ont pris les étoiles au commerce."
+ 
+ ####################################
+ # War Demands
+ ####################################  
+ 
+ 
+ war_demand_trade_sanctions_header:1 "§HSanctions commerciales§!"
+ war_demand_trade_sanctions_subtext:0 "[parameter:country.GetName]"
+ war_demand_trade_sanctions_tooltip_header:0 "$war_demand_trade_sanctions_header$"
+ war_demand_trade_sanctions_tooltip_content:1 "[parameter:country.GetName] aura des sanctions mis sur leur réseau commercial, limitant le commerce pour 10 ans et ses effets d'amortissement pour 20."
+ war_demand_trade_sanctions_tooltip_proper_header:0 "$war_demand_trade_sanctions_header$"
+ war_demand_trade_sanctions_tooltip_proper_content:1 "$war_demand_trade_sanctions_tooltip_content$"
+ 
+ ####################################
+ # Buttons
+ ####################################  
+ 
+ PLANETVIEW_TRADE_FOCUS:0 "Cible commercial"

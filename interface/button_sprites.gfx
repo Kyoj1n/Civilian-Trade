@@ -1,0 +1,24 @@
+spriteTypes = {
+
+
+
+	spriteType = {
+		name = "GFX_mineral_focus"
+		texturefile = "gfx/interface/icons/resources/minerals.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	
+		spriteType = {
+		name = "GFX_energy_focus"
+		texturefile = "gfx/interface/icons/resources/energy.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	
+		spriteType = {
+		name = "GFX_food_focus"
+		texturefile = "gfx/interface/icons/resources/food.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+
+}

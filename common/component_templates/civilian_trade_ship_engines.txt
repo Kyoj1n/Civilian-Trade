@@ -1,0 +1,67 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+#############
+#	POWER	#
+#############
+
+@power_S1 = 10
+@power_M1 = 20
+@power_L1 = 40
+            
+@power_S2 = 15
+@power_M2 = 30
+@power_L2 = 60
+            
+@power_S3 = 20
+@power_M3 = 40
+@power_L3 = 80
+            
+@power_S4 = 25
+@power_M4 = 50
+@power_L4 = 100
+            
+@power_S5 = 30
+@power_M5 = 60
+@power_L5 = 120
+
+#############
+#	COST	#
+#############
+
+@cost_S1 = 5
+@cost_M1 = 10
+@cost_L1 = 20
+
+@cost_S2 = 10
+@cost_M2 = 20
+@cost_L2 = 40
+
+@cost_S3 = 15
+@cost_M3 = 30
+@cost_L3 = 60
+
+@cost_S4 = 20
+@cost_M4 = 40
+@cost_L4 = 80
+
+@cost_S5 = 25
+@cost_M5 = 50
+@cost_L5 = 100
+
+#############
+# UTILITIES #
+#############
+
+### REACTORS
+
+
+utility_component_template = {
+	key = "LARGE_CIVILIAN_ANTIMATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @power_L4
+	cost = -500
+	
+	prerequisites = { "tech_civilian_trade_engines" }
+	component_set = "ANTIMATTER_REACTOR"
+}
