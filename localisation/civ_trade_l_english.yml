@@ -166,12 +166,5 @@
  
  PLANETVIEW_TRADE_FOCUS:0 "Trade Focus"
  
- ###############
- # Test
- ###############
- 
- 
-tax_rate_lable:0 "Tax Rate"
-tax_rate_lable_value:0 "$TAX_RATE$ $VALUE|Y$"
-tax_rate:0 "$TAX_RATE$ $VALUE|Y$"
+
  

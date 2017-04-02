@@ -1634,23 +1634,3 @@ event = {
 		}		
 	}	
 }
-
-event = {
-	id = civtrade.25
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-	
-	}
-	
-	immediate = {
-		set_variable = {
-			which = tax_rate
-			value = 50	
-		
-		}
-
-	}
-
-}
-
