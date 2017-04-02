@@ -1,0 +1,160 @@
+﻿l_polish:
+
+ 
+ #############################
+ # Wydarzenia handlowe
+ #############################
+ 
+ 
+ civtrade.1.name:0 "Handel"
+ civtrade.1.desc:0 "Po ustanowieniu z sukcesem pierwszej kolonii [Root.Owner.GetSpeciesName], nieustraszeni, i jak niektórzy mogliby stwierdzić, nieroztropni przedsiębiorcy [Root.Capital.GetName] wyruszyli z pierwszą karawaną do zewnętrznych kolonii. \n\nTo wielki dzień dla [Root.Owner.GetName] i na zawsze ustanowi niezliczone możliwości i cele dla ludności w głębokiej przestrzeni."
+ # Options
+ civtrade.1.a:0 "Niech wiara prowadzi ich w osiągnięciu celu"
+ civtrade.1.b:0 "Pozwolenia się zgadzają, wyruszajcie."
+ civtrade.1.c:0 "Niezależne postępowanie rodzi niezależną wolę. Uważajcie na waszą pychę."
+ civtrade.1.d:0 "Postęp dokonany własnymi rękami to opłacalne przedsięwzięcie."  
+ civtrade.1.e:0 "Wasze niezależne interesy nie będą tolerowane."  
+ civtrade.1.f:0 "Dopóki płacicie podatki i cła, nie ma problemu."  
+ civtrade.1.g:0 "Wolność obywatelska i wolność handlowa są odznakami naszego społeczeństwa."
+ civtrade.1.h:0 "Pozwolenia wydają się zgadzać, możecie ruszać..."
+ 
+ civ.1.name:0 "Największe przedstawienie w całej Galaktyce!"
+ civ.1.desc:0 "Po przetarciu najdalszych szlaków znanej przestrzeni, i części nieznanej, Wielki Kemplerer odsłonił swój wspaniały okręt cyrkowy - Rozetkę! \n\nWypełniona po brzegi niesamowitymi dziwami i nierozwiązanymi tajemnicami, Rozetka ofetuje coś dla wszystkich, niezależnie od wieku czy gatunku!\n\nZawsze, kiedy Kemplerer i jego Rozetka są w pobliżu, nie przegap fantastycznej, Wielkiej Galaktycznej Galii!"
+ # Options
+ civ.1.a:0 "Niech rozpocznie się występ!"
+ 
+ civmenu.1.name:0 "[ROOT.GetName] Cele handlowe"
+ civmenu.1.desc:0 "Poleć administracji zakup: \n\n     Minerałów  \n\n     Kredytów Energetycznych \n\n     Żywności"
+ 
+ # Options
+ civmenu.1.a:0 "Niech tak będzie."
+ 
+ 
+ #############################
+ # Modyfikatory handlu
+ #############################
+ 
+ 
+ expanded_trade_network:0 "Rozszerzona sieć handlowa"
+ expanded_trade_network_desc:0 "Dzięki zwiększonej przepustowości i ulepszonej infrastrukturze, ta planeta może wydobyć więcej z jej handlarzy."
+ trade_network:0 "Sieć handlowa"
+ trade_network_desc:0 "Międzygalaktyczni handlarze ostatnio uczynili sobie przystanek na tej planecie, zapewniając niewielkie wsparcie jej ekonomii."
+ trade_network_minerals:0 "Sieć handlowa"
+ trade_network_minerals_desc:0 "Międzygalaktyczni handlarze ostatnio uczynili sobie przystanek na tej planecie, zapewniając niewielkie wsparcie jej ekonomii."
+ trade_network_energy:0 "Sieć handlowa"
+ trade_network_energy_desc:0 "Międzygalaktyczni handlarze ostatnio uczynili sobie przystanek na tej planecie, zapewniając niewielkie wsparcie jej ekonomii."  
+ trade_network_food:0 "Sieć handlowa"
+ trade_network_food_desc:0 "Międzygalaktyczni handlarze ostatnio uczynili sobie przystanek na tej planecie, zapewniając niewielkie wsparcie jej ekonomii."
+ 
+ reduced_trade_network:0 "Ograniczona sieć handlowa"
+ reduced_trade_network_desc:0 "Dzięki zwiększonej przepustowości i ulepszonej infrastrukturze, ta planeta może wydobyć więcej z jej handlarzy. Ten efekt został jednak ograniczony przez ostatnie sankcje handlowe."
+ reduced_trade_network_minerals:0 "Ograniczona sieć handlowa"
+ reduced_trade_network_minerals_desc:0 "Dzięki zwiększonej przepustowości i ulepszonej infrastrukturze, ta planeta może wydobyć więcej z jej handlarzy. Ten efekt został jednak ograniczony przez ostatnie sankcje handlowe."
+ reduced_trade_network_energy:0 "Ograniczona sieć handlowa"
+ reduced_trade_network_energy_desc:0 "Dzięki zwiększonej przepustowości i ulepszonej infrastrukturze, ta planeta może wydobyć więcej z jej handlarzy. Ten efekt został jednak ograniczony przez ostatnie sankcje handlowe."  
+ reduced_trade_network_food:0 "Ograniczona sieć handlowa"
+ reduced_trade_network_food_desc:0 "Dzięki zwiększonej przepustowości i ulepszonej infrastrukturze, ta planeta może wydobyć więcej z jej handlarzy. Ten efekt został jednak ograniczony przez ostatnie sankcje handlowe."
+ 
+ trade_minerals_focus:0 "Inwestycja w minerały"
+ trade_minerals_focus_desc:0 "Sieć handlowa tej kolonii skupiona jest na kupowaniu minerałów."
+ trade_energy_focus:0 "Łatanie dziur energetycznych"
+ trade_energy_focus_desc:0 "Sieć handlowa tej kolonii skupiona jest na kupowaniu kredytów energetycznych."
+ trade_food_focus:0 "Walka z głodem"
+ trade_food_focus_desc:0 "Sieć handlowa tej kolonii skupiona jest na kupowaniu żywności."
+ 
+ circus_in_town:0 "Statek cyrkowy w systemie"
+ circus_in_town_desc: "Zapraszam, zapraszam wszystkich! Wielki Cyrk Kemplerera jest w systemie. Przyjdźcie i zobaczcie, jakież to dziwa, fantastyczne indywidua i niekiedy przerażające monstra skrywa Rozetka!"
+ 
+ #############################
+ # Postawa handlarzy
+ #############################
+ 
+ personality_civilian_traders:0 "Handlarze"
+ personality_civilian_traders_desc:0 "Handlarze przemierzają twoje imperium wzdłuż i wszerz, szukając okazji do ubicia targu."
+ 
+ ####################################
+ # Edykty
+ ####################################
+ 
+ # Edykty planetarne
+ 
+ edict_trade_hub:0 "Centrum handlu"
+ edict_trade_hub_desc:0 "Zapewniając wystarczjące warunki logistyczne sprzyjające handlu, planeta ta przyciąga więcej handlarzy niż inne i czerpie z tego korzyści."
+ 
+ edict_change_trade_focus:0 "Zmień cele handlowe"
+ edict_change_trade_focus:0 "Poleć administracji skupowanie konkretnych dóbr od handlarzy."
+ 
+ # Edykty państwowe
+ 
+ edict_trade_subsidies:0 "Dofinansowania do handlu"
+ edict_trade_subsidies_desc:0 "Wspierasz handlarzy, pomagając im w lepszym starcie. Handlarze będą pojawiać się częściej."
+ 
+ ####################################
+ # Rozporządzenia
+ ####################################
+ 
+ policy_civilian_trade:0 "Handel"
+ policy_civilian_trade_desc:0 "W zależności, jak zaingerujesz w handel, twoje imperium wyprodukuje więcej lub mniej handlarzy."
+ 
+ unrestricted_trade:0 "Nieograniczony"
+ unrestricted_trade_name: "Wolny rynek"
+ unrestricted_trade_desc:0 "Umywasz ręce od rynku, pozwalając mu działać według własnych machinacji."
+ 
+ restricted_trade:0 "Ograniczony"
+ restricted_trade_name:0 "Handel ograniczony"
+ restricted_trade_desc:0 "Zbyt wiele wolności wpływa niekorzystnie na imperium. Handlarze nie są już mile widziani i stopniowo będą wycofywać się z naszego rynku."
+ 
+ ####################################
+ # Wielkość powłoki
+ ####################################  
+ 
+ civilian_trade_freighter:0 "Frachtowiec cywilny"
+ civilian_trade_freighter_plural:0 "Frachtowiec cywilny"
+ civilian_trade_tanker:0 "Tankowiec cywilny"
+ civilian_trade_tanker_plural:0 "Tankowiec cywilny"
+ 
+ ####################################
+ # Technologie
+ ####################################  
+ 
+ tech_trade_facilities_one:0 "Placówka handlowa I"
+ tech_trade_facilities_one_desc:0 "Wprowadzając dodatkowe surowce na rynek, jesteśmy w stanie zwiększyć ilość handlarzy w naszym imperium."
+ tech_trade_facilities_two:0 "Placówka handlowa II"
+ tech_trade_facilities_two_desc:0 "Wprowadzając dodatkowe surowce na rynek, jesteśmy w stanie zwiększyć ilość handlarzy w naszym imperium."
+ tech_trade_facilities_three:0 "Placówka handlowa III"
+ tech_trade_facilities_three_desc:0 "Wprowadzając dodatkowe surowce na rynek, jesteśmy w stanie zwiększyć ilość handlarzy w naszym imperium."
+ 
+ TECH_UNLOCK_TRADE_FACILITIES_ONE_TITLE:0 "§HMaksymalna ilość handlarzy:§! 10 Handlarzy"
+ TECH_UNLOCK_TRADE_FACILITIES_ONE_DESC:0 "§HWięcej handlarzy§!\nUmożliwia zwiększenie ilości statków handlowych dostępnych dla naszego ludu."
+ TECH_UNLOCK_TRADE_FACILITIES_TWO_TITLE:0 "§HMaksymalna ilość handlarzy:§! 20 Handlarzy"
+ TECH_UNLOCK_TRADE_FACILITIES_TWO_DESC:0 "§HWięcej handlarzy§!\nUmożliwia zwiększenie ilości statków handlowych dostępnych dla naszego ludu."
+ TECH_UNLOCK_TRADE_FACILITIES_THREE_TITLE:0 "§HMaksymalna ilość handlarzy:§! 30 Handlarzy"
+ TECH_UNLOCK_TRADE_FACILITIES_THREE_DESC:0 "§HWięcej handlarzy§!\nUmożliwia zwiększenie ilości statków handlowych dostępnych dla naszego ludu."
+ 
+ TECH_UNLOCK_TRADE_HUB_TITLE:0 "§HOdblokowuje edykt planetarny:§! Centrum handlu"
+ TECH_UNLOCK_TRADE_HUB_DESC:0 "§HCentrum handlu§!\nZapewniając wystarczjące warunki logistyczne sprzyjające handlu, planeta ta przyciąga więcej handlarzy niż inne i czerpie z tego korzyści."
+ 
+ ####################################
+ # Poddani
+ ####################################
+ 
+ SUBJECT_traders:0 "Handlarze"
+ SUBJECT_DESC_traders:0 "Członkowie twojej populacji, którzy poświęcili się handlu."
+ 
+ ####################################
+ # Żądania wojenne
+ ####################################  
+ 
+ 
+ war_demand_trade_sanctions_header:1 "§HSankcje handlowe§!"
+ war_demand_trade_sanctions_subtext:0 "[parameter:country.GetName]"
+ war_demand_trade_sanctions_tooltip_header:0 "$war_demand_trade_sanctions_header$"
+ war_demand_trade_sanctions_tooltip_content:1 "Na [parameter:country.GetName] zostaną nałożone sankcje, ograniczając ich handel na 10 lat i zmniejszyć jego efektywność na kolejne 20."
+ war_demand_trade_sanctions_tooltip_proper_header:0 "$war_demand_trade_sanctions_header$"
+ war_demand_trade_sanctions_tooltip_proper_content:1 "$war_demand_trade_sanctions_tooltip_content$"
+ 
+ ####################################
+ # Przyciski
+ ####################################  
+ 
+ PLANETVIEW_TRADE_FOCUS:0 "Cele handlowe"

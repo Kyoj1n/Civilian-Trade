@@ -1,0 +1,26 @@
+#########################################
+#
+# Civtrade menu Events
+#
+#########################################
+
+namespace = civmenu
+
+planet_event = {
+	id = civmenu.1
+	title = "civmenu.1.name"
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_ship_thrusters
+	is_triggered_only = yes
+	desc = {
+		text = civmenu.1.desc
+	}	
+	immediate = {
+	}	
+	option = {
+		name = civmenu.1.a
+		trigger = {
+		}
+		remove_planet_flag = show_buttons
+	}
+}

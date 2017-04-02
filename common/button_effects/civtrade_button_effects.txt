@@ -1,0 +1,164 @@
+
+#Scope type varies depending on what is selected
+# This = selected object or player country
+# From = player country
+
+# example_button_effect = {
+	# potential = {
+		# always = yes
+	# }
+	# allow = {
+		# always = yes
+	# }
+	
+	# effect = {
+		# add_monthly_resource_mult = {
+			# resource = minerals
+			# value = 5
+			# min = 5
+			# max = 500
+		# }		
+	# }
+# }
+
+trade_focus_minerals_button_effect = {
+	potential = {
+		has_country_flag = birth_of_civtrade 
+		any_owned_planet = {
+			has_planet_flag = show_buttons	
+		}	
+	}
+	allow = {
+		any_owned_planet = {
+			has_planet_flag = show_buttons
+			NOT = {
+				has_planet_flag = mineral_focus				
+			}	
+		}	
+	}
+	
+	effect = {
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = show_buttons
+			}
+			set_planet_flag = mineral_focus
+			remove_planet_flag = food_focus
+			remove_planet_flag = energy_focus
+			add_modifier = { modifier = "trade_minerals_focus" }
+			remove_modifier = "trade_food_focus"
+			remove_modifier = "trade_energy_focus"
+		}								
+	}
+}
+
+trade_focus_energy_button_effect = {
+	potential = {
+
+			has_country_flag = birth_of_civtrade 
+			any_owned_planet = {
+				has_planet_flag = show_buttons	
+			}
+	}
+	allow = {
+	
+			any_owned_planet = {
+				has_planet_flag = show_buttons
+				NOT = {
+					has_planet_flag = energy_focus				
+				}	
+			}	
+		
+	}
+	
+	effect = {
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = show_buttons
+			}
+			set_planet_flag = energy_focus
+			remove_planet_flag = food_focus
+			remove_planet_flag = mineral_focus
+			add_modifier = { modifier = "trade_energy_focus" }
+			remove_modifier = "trade_minerals_focus"
+			remove_modifier = "trade_food_focus"
+		}		
+	}
+}
+
+trade_focus_food_button_effect = {
+	potential = {
+
+			has_country_flag = birth_of_civtrade 
+			any_owned_planet = {
+				has_planet_flag = show_buttons	
+			}
+	}
+	allow = {
+		any_owned_planet = {
+			has_planet_flag = show_buttons
+			NOT = {
+				has_planet_flag = food_focus				
+			}	
+		}	
+	}
+	
+	effect = {
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = show_buttons
+			}
+			set_planet_flag = food_focus
+			remove_planet_flag = mineral_focus
+			remove_planet_flag = energy_focus
+			add_modifier = { modifier = "trade_food_focus" }
+			remove_modifier = "trade_minerals_focus"
+			remove_modifier = "trade_energy_focus"
+		}		
+	}
+}
+
+test_scrollbar_upButton_effect = {
+	 potential = {
+		 always = yes
+	 }
+	 allow = {
+		 always = yes
+	 }
+	
+	 effect = {
+		add_monthly_resource_mult = {
+			 resource = minerals
+			 value = 5
+			 min = 5
+			 max = 500
+			 
+		
+		
+		
+		}	
+		change_variable = {
+			which = tax_rate
+			value = +1
+		}
+		
+	 }
+ }
+ 
+ test_scrollbar_downButton_effect = {
+	 potential = {
+		 always = yes
+	 }
+	 allow = {
+		 always = yes
+	 }
+	
+	 effect = {
+		 add_monthly_resource_mult = {
+			 resource = minerals
+			 value = -5
+			 min = 5
+			 max = 500
+		 }		
+	 }
+ 

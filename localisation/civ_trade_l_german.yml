@@ -1,0 +1,160 @@
+﻿l_german:
+
+ #############################
+ # Civilian Trade Events
+ #############################
+
+
+ civtrade.1.name:0 "Privater Handel"
+ civtrade.1.desc:0 "Nach der glorreichen Errichtung der ersten [Root.Owner.GetSpeciesName] Kolonie, haben ein paar geschäftstüchtige Leute auf der [Root.Capital.GetName] ihre ersten Güter geladen und sich auf zu den Kolonien gemacht. \n\nDas ist ein großer Tag für [Root.Owner.GetName] und ein Meilenstein für künfitige zivile Handelsprojekte."
+ # Options 
+ civtrade.1.a:0 "Möge das Glück euch auf euren Reisen begleiten"
+ civtrade.1.b:0 "Dein Ersuchen scheint in Ordnung zu sein, geht eurer Wege." 
+ civtrade.1.c:0 "Unabhängige Aktionen erfordern unabhängiges Denken." 
+ civtrade.1.d:0 "Sich mit den eigenen Händen etwas zu schaffen ist ein lohnenswertes Ziel."  
+ civtrade.1.e:0 "Die Versuche ein unhabhängiges Unternehmen zu schaffen, werden nicht toleriert."  
+ civtrade.1.f:0 "Solange die Zölle und Gebühren bezahlt werden wird es keine Probleme geben."  
+ civtrade.1.g:0 "Die Freiheit zum Handel und Reisen ist ein wichtiger Bestandteil unserer Gesellschaft"
+ civtrade.1.h:0 "Dein Ersuche scheint in Ordnung zu sein, sie können weiter."
+
+ civ.1.name:0 "Die Größte Show auf Erden!"
+ civ.1.desc:0 "Nach dem Bereisen der entferntesten bekannten Welten und einiger unbekannten, hat der Große Kemplerer sein fantastisches Zirkus Schiff die Rosette enthüllt! \n\nAngefüllt mit lauter Sehenswürdigkeiten und ungesehenen Geheimnissen hat die Rosette für jedes Alter und Herkunft etwas zu bieten. \n\nWann immer der Kemplerer und die Rosette in einem System Halt machen sollten sie sich dieses Spektakel nicht entgehen lassen!"
+ # Options 
+ civ.1.a:0 "Lasst die Show beginnen!"
+ 
+ civmenu.1.name:0 "[ROOT.GetName] Handels Fokus"
+ civmenu.1.desc:0 "Die Behörden sollen folgendes kaufen: \n\n     Mineralien  \n\n     Energie \n\n     Nahrung"
+ 
+ # Options 
+ civmenu.1.a:0 "Wird gemacht." 
+ 
+ 
+ #############################
+ # Civilian Trade modifiers
+ #############################
+  
+  
+ expanded_trade_network:0 "Erweitertes Handels Netzwerk"
+ expanded_trade_network_desc:0 "Mit einer erweiterten und effizienteren Infrastruktur, holt dieser Planet das bestmögliche aus Handelsgeschäften heraus."
+ trade_network:0 "Handels Netzwerk"
+ trade_network_desc:0 "Intergalaktische Händler haben einen Halt in ihrem System gemacht, es erhöht in dieser Zeit die Planeten Ökonomie."
+ trade_network_minerals:0 "Handels Netzwerk"
+ trade_network_minerals_desc:0 "Intergalaktische Händler haben einen Halt in ihrem System gemacht, es erhöht in dieser Zeit die Planeten Ökonomie."
+ trade_network_energy:0 "Handels Netzwerk"
+ trade_network_energy_desc:0 "Intergalaktische Händler haben einen Halt in ihrem System gemacht, es erhöht in dieser Zeit die Planeten Ökonomie."  
+ trade_network_food:0 "Handels Netzwerk"
+ trade_network_food_desc:0 "Intergalaktische Händler haben einen Halt in ihrem System gemacht, es erhöht in dieser Zeit die Planeten Ökonomie."
+ 
+ reduced_trade_network:0 "Verringertes Handels Aufkommen"
+ reduced_trade_network_desc:0 "Mit einer erweiterten und effizienteren Infrastruktur, holt dieser Planet das bestmögliche aus Handelsgeschäften heraus. Dieser Effekt ist aufgrund von Sanktionen reduziert."
+ reduced_trade_network_minerals:0 "Verringertes Handels Aufkommen"
+ reduced_trade_network_minerals_desc:0 "Intergalaktische Händler haben einen Halt in ihrem System gemacht, es erhöht in dieser Zeit die Planeten Ökonomie. Dieser Effekt ist aufgrund von Sanktionen reduziert.""
+ reduced_trade_network_energy:0 "Verringertes Handels Aufkommen"
+ reduced_trade_network_energy_desc:0 "Intergalaktische Händler haben einen Halt in ihrem System gemacht, es erhöht in dieser Zeit die Planeten Ökonomie. Dieser Effekt ist aufgrund von Sanktionen reduziert."  
+ reduced_trade_network_food:0 "Verringertes Handels Aufkommen"
+ reduced_trade_network_food_desc:0 "Intergalaktische Händler haben einen Halt in ihrem System gemacht, es erhöht in dieser Zeit die Planeten Ökonomie. Dieser Effekt ist aufgrund von Sanktionen reduziert."
+ 
+ trade_minerals_focus:0 "Mineralien Fokus"
+ trade_minerals_focus_desc:0 "Das Kolonie Handels Netzwerk ist auf die Beschaffung von Mineralien fokusiert."
+ trade_energy_focus:0 "Energie Fokus"
+ trade_energy_focus_desc:0 "Das Kolonie Handels Netzwerk ist auf die Beschaffung von Energie fokusiert."
+ trade_food_focus:0 "Nahrungs Fokus"
+ trade_food_focus_desc:0 "Das Kolonie Handels Netzwerk ist auf die Beschaffung von Nahrung fokusiert."
+ 
+ circus_in_town:0 "Zirkus Schiff im System"
+ circus_in_town_desc: "Kommt Leute und staunt! Der große Kemplerer Zirkus ist im System, kommt an Bord und bestaunt die fantastischen und unglaublichsten Kreaturen und Attraktionen in der Galaxies!"
+ 
+ #############################
+ # Civilian Trade personality
+ #############################
+ 
+ personality_civilian_traders:0 "Private Händler"
+ personality_civilian_traders_desc:0 "Private Händler kommen in das System um Handel zu treiben."
+ 
+ ####################################
+ # Edicts
+ #################################### 
+
+ # Planet Edicts
+ 
+ edict_trade_hub:0 "Handels Hub"
+ edict_trade_hub_desc:0 "Die Bereitstellung von Handelsbasen und Märkten auf unseren Planeten zieht mehr Händler an um Handel zu treiben." 
+ edict_mineral_focus:0 "Mineralien Fokus"
+ edict_mineral_focus_desc:0 "Instruire den Gouverneour für mehr Mineralien zu handeln."
+ 
+ edict_energy_focus:0 "Energie Credits Fokus"
+ edict_energy_focus_desc:0 "Instruire den Gouverneour für mehr Energie zu handeln."
+ 
+ edict_food_focus:0 "Nahrungs Fokus"
+ edict_food_focus_desc:0 "Instruire den Gouverneour für mehr Nahrung zu handeln."
+ 
+ ####################################
+ # Policies
+ #################################### 
+ 
+ policy_civilian_trade:0 "Ziviler Handel"
+ policy_civilian_trade_desc:0 "Je nachdem wie fest man die Zügel des Handels hält werden mehr oder weniger Händler im Reich produziert."
+ 
+ unrestricted_trade:0 "Uneingeschränkt"
+ unrestricted_trade_name: "Uneingeschränkter Handel" 
+ unrestricted_trade_desc:0 "Die Märkte haben freie Hand bei Handel und werden nicht durch den Staat beeinflusst."
+
+ restricted_trade:0 "Beschränkt"
+ restricted_trade_name:0 "Beschränkter Handel"
+ restricted_trade_desc:0 "Zu freie Handelswege sind schlecht für unser Reich, deswegen werden keine neuen Handelsschiffe gabaut und die bestehenden langsam ausser Betrieb genommen."
+
+ ####################################
+ # Hull Sizes
+ ####################################  
+ 
+ civilian_trade_freighter:0 "Privater Frachter"
+ civilian_trade_freighter_plural:0 "Private Frachter"
+ civilian_trade_tanker:0 "Privater Tanker"
+ civilian_trade_tanker_plural:0 "Private Tanker"
+ 
+ ####################################
+ # Technologies
+ ####################################  
+ 
+ tech_trade_facilities_one:0 "Handelsmärkte I"
+ tech_trade_facilities_one_desc:0 "Investitionen in Märkte, Verwaltung und öffentliche Einrichtungen können die Erträge von privaten Händler erhöhen."
+ tech_trade_facilities_two:0 "Handelsmärkte II"
+ tech_trade_facilities_two_desc:0 "Investitionen in Märkte, Verwaltung und öffentliche Einrichtungen können die Erträge von privaten Händler erhöhen."
+ tech_trade_facilities_three:0 "Handelsmärkte III"
+ tech_trade_facilities_three_desc:0 "Investitionen in Märkte, Verwaltung und öffentliche Einrichtungen können die Erträge von privaten Händler erhöhen."
+ 
+ TECH_UNLOCK_TRADE_FACILITIES_ONE_TITLE:0 "§HFreischalten Max. Händler:§! 10 Händler"
+ TECH_UNLOCK_TRADE_FACILITIES_ONE_DESC:0 "§HMehr Händler§!\nErlaubt uns die Anzahl der zivilen Händler zu erhöehen."
+ TECH_UNLOCK_TRADE_FACILITIES_TWO_TITLE:0 "§HFreischalten Max Händler:§! 20 Händler"
+ TECH_UNLOCK_TRADE_FACILITIES_TWO_DESC:0 "§HMehr Händler§!\nErlaubt uns die Anzahl der zivilen Händler zu erhöehen."
+ TECH_UNLOCK_TRADE_FACILITIES_THREE_TITLE:0 "§HFreischalten Max Händler:§! 30 Händler"
+ TECH_UNLOCK_TRADE_FACILITIES_THREE_DESC:0 "§HMehr Händler§!\nErlaubt uns die Anzahl der zivilen Händler zu erhöehen.."
+ 
+ TECH_UNLOCK_TRADE_HUB_TITLE:0 "§HFreischalten Edikt:§! Handels Hub"
+ TECH_UNLOCK_TRADE_HUB_DESC:0 "§HHandels Hub§!\nDie Bereitstellund von Marktgebäuden in Verbindung mit angenehmen Wohnmöglichkeiten zieht mehr Händler an wodurch sich mehr Möglichkeiten des Handels bieten.
+ 
+ ####################################
+ # Subjects
+ #################################### 
+ 
+ SUBJECT_traders:0 "Privater Händler"
+ SUBJECT_DESC_traders:0 "Mitglieder unseres Reichs, welche sich zu den Sternen aufmachen um Handel zu treiben."
+ 
+ ####################################
+ # War Demands
+ ####################################  
+  
+  
+ war_demand_trade_sanctions_header:1 "§HHandels Sanktionen§!"
+ war_demand_trade_sanctions_subtext:0 "[parameter:country.GetName]"
+ war_demand_trade_sanctions_tooltip_header:0 "$war_demand_trade_sanctions_header$"
+ war_demand_trade_sanctions_tooltip_content:1 "[parameter:country.GetName] hat Sanktionen auf ihrem Handelsnetzwerk und beschränkt diesen für 10 Jahre!"
+ war_demand_trade_sanctions_tooltip_proper_header:0 "$war_demand_trade_sanctions_header$"
+ war_demand_trade_sanctions_tooltip_proper_content:1 "$war_demand_trade_sanctions_tooltip_content$"
+ 
+ ####################################
+ # Buttons
+ ####################################  
+ 
+ PLANETVIEW_TRADE_FOCUS:0 "Handels Fokus"
+ 
