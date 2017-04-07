@@ -19,10 +19,19 @@ planet_event = {
 	}
 	is_triggered_only = yes
 	immediate = {
-		set_variable = { 
-			which = number_of_stops
-			value = 3
+		if = {
+			limit = {
+				count_pops = {
+					count > 5
+				}
+			}
+			set_variable = { 
+				which = population_size
+				value = 1
+			}
 		}
+	
+		
 		random_country = {
 			limit = {
 				is_country_type = default
@@ -36,10 +45,39 @@ planet_event = {
 		create_fleet = { name = "Civilian Trade Fleet" }
 			
 			last_created_fleet = {
-				set_variable = { 
-					which = number_of_stops
-					value = 2
+				if = {
+					limit = {
+						root = {
+							has_planet_flag = small_population
+						}	
+					}
+					set_variable = { 
+						which = number_of_stops
+						value = 1
+					}				
 				}
+				if = {
+					limit = {
+						root = {
+							has_planet_flag = large_population
+						}
+					}
+					set_variable = { 
+						which = number_of_stops
+						value = 2
+					}				
+				}			
+				if = {
+					limit = {
+						root = {
+							has_planet_flag = large_population
+						}
+					}
+					set_variable = { 
+						which = number_of_stops
+						value = 3
+					}				
+				}			
 				set_owner = root.owner
 				set_fleet_stance = evasive
 				save_event_target_as = trade_fleet
@@ -163,9 +201,51 @@ fleet_event = {
 			}	
 		}
 	}
+}
+# need to change these to look for trader factions and base the flags off of number of trader pops (?)
+planet_event = {
+	id = civtradetest.3
+	hide_window = yes
+	location = ROOT
 	
+	trigger = {
+		count_pops = {
+			count > 5
+		}
+		count_pops = {
+					count < 12
+				}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				count_pops = {
+					count < 12
+				}
+			}
+			set_planet_flag = small_population		
+		}
 
-
-
-
+		if = {
+			limit = {
+					count_pops = {
+						count > 12
+					}				
+			}
+			remove_planet_flag = small_population
+			set_planet_flag = medium_population
+		}
+		
+		if = {
+			limit = {
+				count_pops = {
+					count > 17
+				}
+			}
+			remove_planet_flag = small_population
+			remove_planet_flag = medium_population
+			set_planet_flag = large_population										
+		}					
+	}
 }
