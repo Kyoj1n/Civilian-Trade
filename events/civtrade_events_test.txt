@@ -89,7 +89,7 @@ planet_event = {
 						   ftl = root.owner
 							}
 						}
-						50 = {  create_ship_design = {
+						50 = { create_ship_design = {
 							design = "T2" 
 						   ftl = root.owner
 							}

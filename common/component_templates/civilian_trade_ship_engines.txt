@@ -53,15 +53,16 @@
 
 ### REACTORS
 
-
+# Fission Reactors
 utility_component_template = {
-	key = "LARGE_CIVILIAN_ANTIMATTER_REACTOR"
-	size = large
-	icon = "GFX_ship_part_reactor_4"
+	key = "SMALL_CIVILIAN_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
 	icon_frame = 1
-	power = @power_L4
-	cost = -500
+	power = @power_S1
+	cost = 0
 	
-	prerequisites = { "tech_civilian_trade_engines" }
-	component_set = "ANTIMATTER_REACTOR"
+	prerequisites = { "tech_fission_power" }
+	component_set = "FISSION_REACTOR"
+
 }

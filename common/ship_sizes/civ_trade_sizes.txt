@@ -36,7 +36,7 @@ civilian_trade_freighter = {
 	combat_rotation_speed = 0.2
 	
 	modifier = {
-		ship_evasion_mult = -1
+		ship_evasion_add = 5
 		ship_armor_add = 3
 	}
 	max_hitpoints = 240
@@ -67,7 +67,7 @@ civilian_trade_tanker = {
 	combat_rotation_speed = 0.2
 	
 	modifier = {
-		ship_evasion_mult = -1
+		ship_evasion_add = 5
 		ship_armor_add = 3
 	}
 	max_hitpoints = 240

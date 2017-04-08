@@ -8,8 +8,8 @@ ship_design = {
 		slot = "mid"
 		
 		component = {
-			slot = "LARGE_UTILITY_1"
-			template = "LARGE_CIVILIAN_ANTIMATTER_REACTOR"
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_CIVILIAN_FISSION_REACTOR"
 		}
 	}
 	required_component = "WARP_DRIVE_1"
@@ -26,8 +26,8 @@ ship_design = {
 		slot = "mid"
 		
 		component = {
-			slot = "LARGE_UTILITY_1"
-			template = "LARGE_CIVILIAN_ANTIMATTER_REACTOR"
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_CIVILIAN_FISSION_REACTOR"
 		}
 	}
 	required_component = "WARP_DRIVE_1"
