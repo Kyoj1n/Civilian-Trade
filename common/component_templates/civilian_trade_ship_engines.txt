@@ -1,7 +1,20 @@
 # Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+
+@ftl1 = 5
+@ftl2 = 10
+@ftl3 = 15
+@ftl4 = 30
+
 #############
 #	POWER	#
 #############
+
+@power1 = -5
+@power2 = -7.5
+@power3 = -10
+@power4 = -10
+
 
 @power_S1 = 10
 @power_M1 = 20
@@ -60,9 +73,62 @@ utility_component_template = {
 	icon = "GFX_ship_part_reactor_1"
 	icon_frame = 1
 	power = @power_S1
-	cost = 0
+	cost = -100
 	
 	prerequisites = { "tech_fission_power" }
 	component_set = "FISSION_REACTOR"
+}
 
+### WARP DRIVES
+utility_component_template = {
+	key = "WARP_DRIVE_CIVILIAN"
+	size = small
+	icon = "GFX_ship_part_warp_drive_1"
+	icon_frame = 1
+	power = @power1
+	cost = 0
+	ftl = warp
+	
+	ai_weight = {
+		weight = 1
+	}
+
+	class_restriction = { shipclass_military }
+	component_set = "ftl_civilian_components"
+}
+
+### HYPER DRIVES
+utility_component_template = {
+	key = "HYPER_DRIVE_CIVILIAN"
+	size = small
+	icon = "GFX_ship_part_hyper_drive_1"
+	icon_frame = 1
+	power = @power1
+	cost = 0
+	ftl = hyperdrive
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	class_restriction = { shipclass_military }
+	component_set = "ftl_civilian_components"
+}
+
+### WORM HOLE DRIVES
+utility_component_template = {
+	key = "WORMHOLE_DRIVE_CIVILIAN"
+	size = small
+	icon = "GFX_ship_part_wormhole"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	ftl = wormhole
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+	class_restriction = { shipclass_military }
+	component_set = "ftl_civilian_components"
 }

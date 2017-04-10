@@ -6,16 +6,18 @@
 #
 ############################
 
-namespace = civtradetest
+namespace = civtrade
 
 planet_event = {
-	id = civtradetest.1
+	id = civtrade.1
 	hide_window = yes
 	location = ROOT
 	
 	trigger = {
 		owner = {is_country_type = default
 		}
+		has_planet_flag = trade_planet	
+
 	}
 	is_triggered_only = yes
 	immediate = {
@@ -108,7 +110,7 @@ planet_event = {
 					queue_actions = {	
 						repeat = {
 							while = {
-								id = "civtradertest.1.trigger.1"
+								id = "civtrade.1.trigger.1"
 								check_variable = {
 									which = number_of_stops
 									value > 0
@@ -116,7 +118,7 @@ planet_event = {
 							}
 							find_random_system = {
 								trigger = {
-									id = "civtradetest.1.trigger.2"
+									id = "civtrade.1.trigger.2"
 									distance = {
 										source = PREV
 										max_distance = 30
@@ -130,7 +132,7 @@ planet_event = {
 								}	
 								find_random_planet = {
 									trigger = {
-										id = "civtradetest.1.trigger.3"
+										id = "civtrade.1.trigger.3"
 										is_star = yes
 									}																	
 									found_planet = {
@@ -140,8 +142,8 @@ planet_event = {
 										}
 											
 										effect = {
-											id = civtradetest.1.effect.1
-											event_target:trade_fleet = { fleet_event = { id = civtradetest.2 } }
+											id = civtrade.1.effect.1
+											event_target:trade_fleet = { fleet_event = { id = civtrade.2 } }
 										}
 									}												
 								}
@@ -158,7 +160,7 @@ planet_event = {
 }
 
 fleet_event = {
-	id = civtradetest.2
+	id = civtrade.2
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -204,7 +206,7 @@ fleet_event = {
 }
 # need to change these to look for trader factions and base the flags off of number of trader pops (?)
 planet_event = {
-	id = civtradetest.3
+	id = civtrade.3
 	hide_window = yes
 	location = ROOT
 	
@@ -249,3 +251,49 @@ planet_event = {
 		}					
 	}
 }
+
+planet_event = {
+	id = civtrade.4
+	hide_window = yes
+	location = ROOT
+	
+	trigger = {
+		any_pop = {
+			member_of_faction = yes
+			pop_faction = {
+				is_pop_faction_type = prosperity
+			}
+		}
+	}
+	
+	immediate = {
+		root = {
+			set_planet_flag = trade_planet
+		}
+	}
+}
+
+country_event = {
+	id = civtrade.5
+	hide_window = yes
+	location = ROOT
+	
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		 days = 30
+	}
+	
+	immediate = {
+		random_country = {
+			random_planet = {
+				limit = {
+					has_planet_flag = trade_planet
+				}
+				planet_event = { id = civtrade.1 days = 15 random 5 }
+			}
+		}
+	}
+}
+

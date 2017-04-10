@@ -41,7 +41,7 @@ civilian_trade_freighter = {
 	}
 	max_hitpoints = 240
 	size_multiplier = 0
-	fleet_slot_size = 3
+	fleet_slot_size = 0
 	section_slots = { "mid" = { locator = "root" } }
 	num_target_locators = 0
 	is_space_station = no
@@ -52,7 +52,7 @@ civilian_trade_freighter = {
 	
 	is_designable = no
 	
-	required_component_set = "ftl_components"
+	required_component_set = "ftl_civilian_components"
 	required_component_set = "thruster_components"
 }
 
@@ -72,7 +72,7 @@ civilian_trade_tanker = {
 	}
 	max_hitpoints = 240
 	size_multiplier = 0
-	fleet_slot_size = 3
+	fleet_slot_size = 0
 	section_slots = { "mid" = { locator = "root" } }
 	num_target_locators = 0
 	is_space_station = no
@@ -83,6 +83,6 @@ civilian_trade_tanker = {
 	
 	is_designable = no
 	
-	required_component_set = "ftl_components"
+	required_component_set = "ftl_civilian_components"
 	required_component_set = "thruster_components"
 }
