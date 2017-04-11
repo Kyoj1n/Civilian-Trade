@@ -17,10 +17,17 @@ planet_event = {
 		owner = {is_country_type = default
 		}
 		has_planet_flag = trade_planet	
+		not = { has_planet_flag = trader_out }
 
 	}
 	is_triggered_only = yes
 	immediate = {
+		root.owner = {
+			save_event_target_as = home_country
+		}
+		root = {
+			set_timed_planet_flag = { flag = trader_out days = 15 }		
+		}
 		if = {
 			limit = {
 				count_pops = {
@@ -32,21 +39,29 @@ planet_event = {
 				value = 1
 			}
 		}
-	
-		
-		random_country = {
-			limit = {
-				is_country_type = default
-				}
-				create_leader = {
-					type = admiral
-					name = random
-					skill = 100
-				}
-		}				
+
 		create_fleet = { name = "Civilian Trade Fleet" }
 			
 			last_created_fleet = {
+				set_owner = root.owner
+				set_fleet_stance = evasive
+				save_event_target_as = trade_fleet
+				set_fleet_flag = civilian_trade_fleet
+				if = {
+					random_list = { 
+						50 = { create_ship_design = {
+							design = "T1" 
+						   ftl = root.owner
+							}
+						}
+						50 = { create_ship_design = {
+							design = "T2" 
+						   ftl = root.owner
+							}
+						}
+					}
+				}			
+
 				if = {
 					limit = {
 						root = {
@@ -56,7 +71,7 @@ planet_event = {
 					set_variable = { 
 						which = number_of_stops
 						value = 1
-					}				
+					}
 				}
 				if = {
 					limit = {
@@ -78,33 +93,13 @@ planet_event = {
 					set_variable = { 
 						which = number_of_stops
 						value = 3
-					}				
-				}			
-				set_owner = root.owner
-				set_fleet_stance = evasive
-				save_event_target_as = trade_fleet
-				set_fleet_flag = civilian_trade_fleet
-				if = {
-					random_list = { 
-						50 = { create_ship_design = {
-							design = "T1" 
-						   ftl = root.owner
-							}
-						}
-						50 = { create_ship_design = {
-							design = "T2" 
-						   ftl = root.owner
-							}
-						}
 					}
-				}
-				
+				}	
 				create_ship = {
 					name = random
 					design = last_created_design
 					graphical_culture = "pirate_01"
-				}
-				
+				}				
 				assign_leader = last_created_leader
 				set_location = ROOT
 					queue_actions = {	
@@ -119,21 +114,25 @@ planet_event = {
 							find_random_system = {
 								trigger = {
 									id = "civtrade.1.trigger.2"
+									any_planet = {
+										is_colony = yes
+										exists = controller
+										controller = { is_same_value = event_target:home_country }						
+								    }		
 									distance = {
 										source = PREV
 										max_distance = 30
 										min_distance = 0
-									}	
-								}		
-
-								found_system = {
-										move_to = THIS
 									}
 								}	
+								found_system = {
+									move_to = THIS
+								}
+							}	
 								find_random_planet = {
 									trigger = {
 										id = "civtrade.1.trigger.3"
-										is_star = yes
+										is_colony = yes							
 									}																	
 									found_planet = {
 										orbit_planet = THIS 
@@ -143,11 +142,11 @@ planet_event = {
 											
 										effect = {
 											id = civtrade.1.effect.1
+											this = { planet_event = { id = civtradebonus.1 } }
 											event_target:trade_fleet = { fleet_event = { id = civtrade.2 } }
 										}
 									}												
 								}
-							
 						}
 					}
 
@@ -204,56 +203,12 @@ fleet_event = {
 		}
 	}
 }
-# need to change these to look for trader factions and base the flags off of number of trader pops (?)
+
+
+
+
 planet_event = {
 	id = civtrade.3
-	hide_window = yes
-	location = ROOT
-	
-	trigger = {
-		count_pops = {
-			count > 5
-		}
-		count_pops = {
-					count < 12
-				}
-	}
-	
-	immediate = {
-		if = {
-			limit = {
-				count_pops = {
-					count < 12
-				}
-			}
-			set_planet_flag = small_population		
-		}
-
-		if = {
-			limit = {
-					count_pops = {
-						count > 12
-					}				
-			}
-			remove_planet_flag = small_population
-			set_planet_flag = medium_population
-		}
-		
-		if = {
-			limit = {
-				count_pops = {
-					count > 17
-				}
-			}
-			remove_planet_flag = small_population
-			remove_planet_flag = medium_population
-			set_planet_flag = large_population										
-		}					
-	}
-}
-
-planet_event = {
-	id = civtrade.4
 	hide_window = yes
 	location = ROOT
 	
@@ -272,6 +227,62 @@ planet_event = {
 		}
 	}
 }
+
+
+# need to change these to look for trader factions and base the flags off of number of trader pops (?)
+planet_event = {
+	id = civtrade.4
+	hide_window = yes
+	location = ROOT
+	
+	trigger = {
+		any_pop = {
+			member_of_faction = yes
+			pop_faction = {
+				is_pop_faction_type = prosperity
+			}
+		}
+		count_pops = {
+			count > 5
+		}
+	}
+	
+	immediate = {
+		root = {
+			if = {
+				limit = {
+					count_pops = {
+						count > 5
+					}
+				}
+				set_planet_flag = small_population		
+			}
+
+			if = {
+				limit = {
+						count_pops = {
+							count > 12
+						}				
+				}
+				remove_planet_flag = small_population
+				set_planet_flag = medium_population
+			}
+			
+			if = {
+				limit = {
+					count_pops = {
+						count > 18
+					}
+				}
+				remove_planet_flag = small_population
+				remove_planet_flag = medium_population
+				set_planet_flag = large_population										
+			}				
+		}				
+	}
+}
+
+
 
 country_event = {
 	id = civtrade.5

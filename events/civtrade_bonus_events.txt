@@ -1,0 +1,40 @@
+############################
+#
+# Civilian Trade Events
+#
+# Written by Kyoj1n
+#
+############################
+
+namespace = civtradebonus
+
+planet_event = {
+	id = civtradebonus.1
+	hide_window = yes
+	location = ROOT
+	
+	trigger = {
+		owner = {is_country_type = default
+		}
+
+	}
+	is_triggered_only = yes
+	immediate = {
+		every_planet = {
+			limit = {
+				distance = {
+					source = root
+					max_distance = 30
+					min_distance = 5
+				}
+				not = { has_modifier = "trade_network" }
+				is_colony = yes
+			}
+
+			add_modifier = {
+				modifier = "trade_network"
+				days = -1
+			}
+		}
+	}	
+}
