@@ -42,6 +42,15 @@ trade_network = {
 	icon_frame = 1
 }
 
+foriegn_trade_network = {
+	tile_resource_minerals_mult = 0.03
+	tile_resource_energy_mult = 0.03
+	tile_resource_food_mult = 0.03
+	pop_ethic_xenophile_attraction_mult = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
+	icon_frame = 1
+}
+
 trade_hub = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
 	icon_frame = 1

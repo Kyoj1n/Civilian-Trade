@@ -46,6 +46,8 @@
  expanded_trade_network_desc:0 "With increase compacity and infastructure this planet can get the most out of its traders."
  trade_network:0 "Trade Network"
  trade_network_desc:0 "Intergalactic traders have recently made a stop at this planet providing a small boost to its economy."
+ foriegn_trade_network:0 "Foriegn Trade Network"
+ foriegn_trade_network_desc:0 "Intergalactic traders from another emprire have recently made a stop at this planet providing a small boost to its economy."
  trade_network_minerals:0 "Trade Network"
  trade_network_minerals_desc:0 "Intergalactic traders have recently made a stop at this planet providing a small boost to its economy."
  trade_network_energy:0 "Trade Network"

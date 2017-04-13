@@ -76,7 +76,7 @@ planet_event = {
 				if = {
 					limit = {
 						root = {
-							has_planet_flag = large_population
+							has_planet_flag = medium_population
 						}
 					}
 					set_variable = { 
@@ -142,7 +142,7 @@ planet_event = {
 											
 										effect = {
 											id = civtrade.1.effect.1
-											this = { planet_event = { id = civtradebonus.1 } }
+											#this = { planet_event = { id = civtradebonus.1 } }
 											event_target:trade_fleet = { fleet_event = { id = civtrade.2 } }
 										}
 									}												
