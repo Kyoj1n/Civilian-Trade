@@ -14,27 +14,192 @@ planet_event = {
 	location = ROOT
 	
 	trigger = {
-		owner = {is_country_type = default
-		}
-
+		has_owner = yes
+		owner = { is_country_type = default }
+		has_planet_flag = trade_planet
+		has_planet_flag = small_population
 	}
-	is_triggered_only = yes
 	immediate = {
 		every_planet = {
 			limit = {
 				distance = {
 					source = root
-					max_distance = 30
-					min_distance = 5
+					max_distance = 20
+					min_distance = 1
 				}
-				not = { has_modifier = "trade_network" }
+				not = { 
+					or = {
+						has_modifier = "trade_network" 	
+						has_modifier = "foriegn_trade_network" 	
+					}
+				}
 				is_colony = yes
+				not = { owner = { has_closed_borders = root.owner } }				
 			}
-
-			add_modifier = {
-				modifier = "trade_network"
-				days = -1
+			if = {
+				limit = {
+					owner = {
+						not = { is_same_value = root.owner }
+					}
+				}
+				add_modifier = {
+					modifier = "foriegn_trade_network"
+					days = -1
+				}
+				else = {
+					add_modifier = {
+						modifier = "trade_network"
+						days = -1
+					}				
+				}
 			}
 		}
+	}	
+}
+
+planet_event = {
+	id = civtradebonus.2
+	hide_window = yes
+	location = ROOT
+	
+	trigger = {
+		has_owner = yes
+		owner = { is_country_type = default }
+		has_planet_flag = trade_planet
+		has_planet_flag = medium_population
+	}
+	immediate = {
+		every_planet = {
+			limit = {
+				distance = {
+					source = root
+					max_distance = 40
+					min_distance = 1
+				}
+				not = { 
+					or = {
+						has_modifier = "trade_network" 	
+						has_modifier = "foriegn_trade_network" 	
+					}
+				}
+				is_colony = yes
+				not = { owner = { has_closed_borders = root.owner } }
+			}
+			if = {
+				limit = {
+					owner = {
+						not = { is_same_value = root.owner }
+					}
+				}
+				add_modifier = {
+					modifier = "foriegn_trade_network"
+					days = -1
+				}
+				else = {
+					add_modifier = {
+						modifier = "trade_network"
+						days = -1
+					}				
+				}
+			}
+		}
+	}	
+}
+
+planet_event = {
+	id = civtradebonus.3
+	hide_window = yes
+	location = ROOT
+	
+	trigger = {
+		has_owner = yes
+		owner = { is_country_type = default }
+		has_planet_flag = trade_planet
+		has_planet_flag = large_population
+	}
+	immediate = {
+		every_planet = {
+			limit = {
+				distance = {
+					source = root
+					max_distance = 60
+					min_distance = 1
+				}
+				not = { 
+					or = {
+						has_modifier = "trade_network" 	
+						has_modifier = "foriegn_trade_network" 	
+					}
+				}
+				is_colony = yes
+				not = { owner = { has_closed_borders = root.owner } }
+			}
+			if = {
+				limit = {
+					owner = {
+						not = { is_same_value = root.owner }
+					}
+				}
+				add_modifier = {
+					modifier = "foriegn_trade_network"
+					days = -1
+				}
+				else = {
+					add_modifier = {
+						modifier = "trade_network"
+						days = -1
+					}				
+				}
+			}
+		}
+	}	
+}
+
+event = {
+	id = civtradebonus.4
+	hide_window = yes
+	location = ROOT
+	is_triggered_only = yes
+	trigger = {
+		any_country = {
+				is_country_type = default
+			any_owned_planet = {
+				or = {
+				has_modifier = "trade_network" 	
+				has_modifier = "foriegn_trade_network"							
+				}
+				
+			}
+		
+		}
+	
+			
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				any_owned_planet = {
+					or = {
+						has_modifier = "trade_network" 	
+						has_modifier = "foriegn_trade_network"
+					}
+				
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					or = {
+						has_modifier = "trade_network" 	
+						has_modifier = "foriegn_trade_network"			
+					}
+				}
+				remove_modifier = "trade_network"
+				remove_modifier = "foriegn_trade_network"	
+			}		
+		
+		}
+
 	}	
 }

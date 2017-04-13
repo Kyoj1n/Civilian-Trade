@@ -51,3 +51,9 @@ on_building_wormhole_station = {
 	events = {
 	}
 }
+
+on_monthly_pulse = {
+	events = {
+		civtradebonus.4
+	}
+}
