@@ -18,7 +18,6 @@ planet_event = {
 		}
 		has_planet_flag = trade_planet	
 		not = { has_planet_flag = trader_out }
-
 	}
 	is_triggered_only = yes
 	immediate = {
@@ -142,7 +141,20 @@ planet_event = {
 											
 										effect = {
 											id = civtrade.1.effect.1
-											#this = { planet_event = { id = civtradebonus.1 } }
+											this = { 
+												if = {
+													limit = {
+														has_edict = capacity_overload
+													}
+													owner = { country_event = { id = civtradebonus.6 } }
+												}
+												if = {
+													limit = {
+														has_edict = production_targets
+													}
+													owner = { country_event = { id = civtradebonus.5 } }
+												}
+											}
 											event_target:trade_fleet = { fleet_event = { id = civtrade.2 } }
 										}
 									}												
@@ -211,7 +223,6 @@ planet_event = {
 	id = civtrade.3
 	hide_window = yes
 	location = ROOT
-	
 	trigger = {
 		any_pop = {
 			member_of_faction = yes
@@ -277,7 +288,7 @@ planet_event = {
 				remove_planet_flag = small_population
 				remove_planet_flag = medium_population
 				set_planet_flag = large_population										
-			}				
+			}
 		}				
 	}
 }
@@ -302,48 +313,51 @@ country_event = {
 				limit = {
 					has_planet_flag = trade_planet
 				}
-				planet_event = { id = civtrade.1 days = 15 random 5 }
-			}
-		}
-	}
-}
-
-
-planet_event = {
-	id = civtrade.6
-	hide_window = yes
-	location = ROOT
-	
-	trigger = {
-		any_pop = {
-			member_of_faction = yes
-			pop_faction = {
-				is_pop_faction_type = prosperity
-			}
-		}
-		count_pops = {
-			count > 5
-		}
-		has_resource = {
-			type = minerals
-			amount > 30
-
-		}
-	}
-	
-	immediate = {
-		root = {
-			if = {
-				limit {
-					has_resource = {
-						type = minerals
-						amount > 30
-					
-					}
+				random_list = {
+					10 = { }
+					90 = { planet_event = { id = civtrade.1 days = 15 random 5 } }
 				}
-				set_planet_flag = mineral_planet			
 			}
-
-		}		
+		}
 	}
 }
+
+
+# planet_event = {
+	# id = civtrade.6
+	# hide_window = yes
+	# location = ROOT
+	
+	# trigger = {
+		# any_pop = {
+			# member_of_faction = yes
+			# pop_faction = {
+				# is_pop_faction_type = prosperity
+			# }
+		# }
+		# count_pops = {
+			# count > 5
+		# }
+		# has_resource = {
+			# type = minerals
+			# amount > 30
+
+		# }
+	# }
+	
+	# immediate = {
+		# root = {
+			# if = {
+				# limit {
+					# has_resource = {
+						# type = minerals
+						# amount > 30
+					
+					# }
+				# }
+				# set_planet_flag = mineral_planet			
+			# }
+
+		# }		
+	# }
+# }

@@ -24,17 +24,25 @@ planet_event = {
 			limit = {
 				distance = {
 					source = root
-					max_distance = 20
+					max_distance = 60
 					min_distance = 1
 				}
-				not = { 
-					or = {
-						has_modifier = "trade_network" 	
-						has_modifier = "foriegn_trade_network" 	
+				or = {
+					not = { 
+						or = {
+							has_modifier = "trade_network" 	
+							has_modifier = "foriegn_trade_network" 	
+						}
 					}
+					root = {
+						has_edict = production_targets								
+						has_edict = capacity_overload					
+					}
+				
 				}
+
 				is_colony = yes
-				not = { owner = { has_closed_borders = root.owner } }				
+				not = { owner = { has_closed_borders = root.owner } }
 			}
 			if = {
 				limit = {
@@ -47,10 +55,44 @@ planet_event = {
 					days = -1
 				}
 				else = {
-					add_modifier = {
-						modifier = "trade_network"
-						days = -1
-					}				
+					if = {
+						limit = {
+							root = {
+								has_edict = capacity_overload
+							}
+						}
+						add_modifier = {
+							modifier = "trade_network_energy"
+							days = -1
+						}
+					}
+					if = {
+						limit = {
+							root = {
+								has_edict = production_targets
+							}
+						}
+						add_modifier = {
+							modifier = "trade_network_minerals"
+							days = -1
+						}
+
+					}
+					if = {
+						limit = {
+							root = {
+								not = {
+									has_edict = production_targets								
+									has_edict = capacity_overload
+								}
+							}
+						}						
+						add_modifier = {
+							modifier = "trade_network"
+							days = -1
+						}									
+					}						
+					
 				}
 			}
 		}
@@ -73,15 +115,23 @@ planet_event = {
 			limit = {
 				distance = {
 					source = root
-					max_distance = 40
+					max_distance = 60
 					min_distance = 1
 				}
-				not = { 
-					or = {
-						has_modifier = "trade_network" 	
-						has_modifier = "foriegn_trade_network" 	
+				or = {
+					not = { 
+						or = {
+							has_modifier = "trade_network" 	
+							has_modifier = "foriegn_trade_network" 	
+						}
 					}
+					root = {
+						has_edict = production_targets								
+						has_edict = capacity_overload					
+					}
+				
 				}
+
 				is_colony = yes
 				not = { owner = { has_closed_borders = root.owner } }
 			}
@@ -96,10 +146,44 @@ planet_event = {
 					days = -1
 				}
 				else = {
-					add_modifier = {
-						modifier = "trade_network"
-						days = -1
-					}				
+					if = {
+						limit = {
+							root = {
+								has_edict = capacity_overload
+							}
+						}
+						add_modifier = {
+							modifier = "trade_network_energy"
+							days = -1
+						}
+					}
+					if = {
+						limit = {
+							root = {
+								has_edict = production_targets
+							}
+						}
+						add_modifier = {
+							modifier = "trade_network_minerals"
+							days = -1
+						}
+
+					}
+					if = {
+						limit = {
+							root = {
+								not = {
+									has_edict = production_targets								
+									has_edict = capacity_overload
+								}
+							}
+						}						
+						add_modifier = {
+							modifier = "trade_network"
+							days = -1
+						}									
+					}						
+					
 				}
 			}
 		}
@@ -125,12 +209,20 @@ planet_event = {
 					max_distance = 60
 					min_distance = 1
 				}
-				not = { 
-					or = {
-						has_modifier = "trade_network" 	
-						has_modifier = "foriegn_trade_network" 	
+				or = {
+					not = { 
+						or = {
+							has_modifier = "trade_network" 	
+							has_modifier = "foriegn_trade_network" 	
+						}
 					}
+					root = {
+						has_edict = production_targets								
+						has_edict = capacity_overload					
+					}
+				
 				}
+
 				is_colony = yes
 				not = { owner = { has_closed_borders = root.owner } }
 			}
@@ -145,10 +237,44 @@ planet_event = {
 					days = -1
 				}
 				else = {
-					add_modifier = {
-						modifier = "trade_network"
-						days = -1
-					}				
+					if = {
+						limit = {
+							root = {
+								has_edict = capacity_overload
+							}
+						}
+						add_modifier = {
+							modifier = "trade_network_energy"
+							days = -1
+						}
+					}
+					if = {
+						limit = {
+							root = {
+								has_edict = production_targets
+							}
+						}
+						add_modifier = {
+							modifier = "trade_network_minerals"
+							days = -1
+						}
+
+					}
+					if = {
+						limit = {
+							root = {
+								not = {
+									has_edict = production_targets								
+									has_edict = capacity_overload
+								}
+							}
+						}						
+						add_modifier = {
+							modifier = "trade_network"
+							days = -1
+						}									
+					}						
+					
 				}
 			}
 		}
@@ -166,7 +292,9 @@ event = {
 			any_owned_planet = {
 				or = {
 				has_modifier = "trade_network" 	
-				has_modifier = "foriegn_trade_network"							
+				has_modifier = "foriegn_trade_network"
+				has_modifier = "trade_network_energy"
+				has_modifier = "trade_network_minerals" 				
 				}
 				
 			}
@@ -184,6 +312,8 @@ event = {
 					or = {
 						has_modifier = "trade_network" 	
 						has_modifier = "foriegn_trade_network"
+						has_modifier = "trade_network_energy"
+						has_modifier = "trade_network_minerals" 
 					}
 				
 				}
@@ -192,14 +322,59 @@ event = {
 				limit = {
 					or = {
 						has_modifier = "trade_network" 	
-						has_modifier = "foriegn_trade_network"			
+						has_modifier = "foriegn_trade_network"
+						has_modifier = "trade_network_energy"
+						has_modifier = "trade_network_minerals" 						
 					}
 				}
 				remove_modifier = "trade_network"
-				remove_modifier = "foriegn_trade_network"	
+				remove_modifier = "foriegn_trade_network"
+				remove_modifier = "trade_network_energy"
+				remove_modifier = "trade_network_minerals"
 			}		
-		
 		}
-
 	}	
+}
+# add minerals for when a mineral ship arrives at a planet
+country_event = {
+	id = civtradebonus.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	immediate = {
+		add_minerals = 10
+	}	
+}
+# add energy for when a energy ship arrives at a planet
+country_event = {
+	id = civtradebonus.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	immediate = {
+		add_energy = 10
+	}	
+}
+
+country_event = {
+	id = civtradebonus.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROMFROM.fleet = {
+			has_fleet_flag = civilian_trade_fleet
+		}
+	}
+	
+	immediate = {
+		THIS = {
+			add_minerals = 50
+			add_energy = 50
+		}
+	}
 }

@@ -39,6 +39,7 @@ on_pop_migration_end = {
 # FromFromFrom = ship 2
 on_ship_destroyed_perp = {
 	events = {
+		civtradebonus.7
 	}
 	random_events = {
 	}
