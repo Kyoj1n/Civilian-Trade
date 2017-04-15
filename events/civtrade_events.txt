@@ -18,6 +18,34 @@ planet_event = {
 		}
 		has_planet_flag = trade_planet	
 		not = { has_planet_flag = trader_out }
+		any_pop = {
+			member_of_faction = yes
+			pop_faction = {
+				is_pop_faction_type = prosperity
+			}
+			or = {
+				has_living_standard = {
+					type = living_standard_utopian
+				}
+				has_living_standard = {
+					type = living_standard_good
+				}
+				has_living_standard = {
+					type = living_standard_normal
+				}	
+				has_living_standard = {
+					type = living_standard_normal
+				}				
+			}
+			is_enslaved = no
+			or = {
+			has_citizenship_type = { type = citizenship_full }
+			has_citizenship_type = { type = citizenship_limited }
+			has_citizenship_type = { type = citizenship_slavery }
+			has_citizenship_type = { type = citizenship_purge }
+			}
+			has_migration_control = no
+		}
 	}
 	is_triggered_only = yes
 	immediate = {
@@ -113,6 +141,14 @@ planet_event = {
 							find_random_system = {
 								trigger = {
 									id = "civtrade.1.trigger.2"
+									any_ship_in_system = {
+										not = {
+											owner = {
+												is_hostile = root.owner
+											}
+										}
+									
+									}
 									any_planet = {
 										is_colony = yes
 										exists = controller
@@ -153,6 +189,15 @@ planet_event = {
 														has_edict = production_targets
 													}
 													owner = { country_event = { id = civtradebonus.5 } }
+												}
+												if = {
+													limit = {
+														not = { has_modifier = "trade_ship_arrived" }
+													}
+													add_modifier = {
+														modifier = "trade_ship_arrived"
+														days = 15
+													}													
 												}
 											}
 											event_target:trade_fleet = { fleet_event = { id = civtrade.2 } }
@@ -252,6 +297,28 @@ planet_event = {
 			pop_faction = {
 				is_pop_faction_type = prosperity
 			}
+			or = {
+				has_living_standard = {
+					type = living_standard_utopian
+				}
+				has_living_standard = {
+					type = living_standard_good
+				}
+				has_living_standard = {
+					type = living_standard_normal
+				}	
+				has_living_standard = {
+					type = living_standard_normal
+				}				
+			}
+			is_enslaved = no
+			or = {
+			has_citizenship_type = { type = citizenship_full }
+			has_citizenship_type = { type = citizenship_limited }
+			has_citizenship_type = { type = citizenship_slavery }
+			has_citizenship_type = { type = citizenship_purge }
+			}
+			has_migration_control = no
 		}
 		count_pops = {
 			count > 5
@@ -361,3 +428,34 @@ country_event = {
 		# }		
 	# }
 # }
+
+country_event = {
+	id = civtrade.66
+	hide_window = yes
+	
+	trigger = {
+	
+	}
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			every_owned_ship = {
+				limit = {
+					or = {
+						is_ship_size = civilian_trade_freighter				
+						is_ship_size = civilian_trade_tanker	
+					}				
+				}
+
+				fleet = {
+					delete_fleet = this
+				}
+			
+			}
+		
+		}
+	
+	}
+
+}

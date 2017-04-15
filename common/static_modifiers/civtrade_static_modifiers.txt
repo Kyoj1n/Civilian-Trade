@@ -7,30 +7,49 @@ trade_network_minerals = {
 	tile_resource_minerals_mult = 0.03
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
-	icon_frame = 1
+	icon_frame = 4
 }
 
 trade_network_energy = {
 	tile_resource_energy_mult = 0.03
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
-	icon_frame = 1
+	icon_frame = 4
 }
 
 trade_network_food = {
 	tile_resource_food_mult = 0.03
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
-	icon_frame = 1
+	icon_frame = 4
 }
 
-expanded_trade_network = {
-	tile_resource_minerals_mult = 0.08
-	tile_resource_energy_mult = 0.08
-	tile_resource_food_mult = 0.08
+trade_network_reeducation = {
+	pop_government_ethic_attraction = 0.03
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
-	icon_frame = 1
+	icon_frame = 4
+}
+
+trade_network_propaganda = {
+	pop_happiness = 0.02
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
+	icon_frame = 4
+}
+
+trade_network_farming = {
+	pop_growth_req_mult = -0.03
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
+	icon_frame = 4
+}
+
+trade_network_infrastructure = {
+	planet_building_build_speed_mult = 0.05
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
+	icon_frame = 4
 }
 
 trade_network = {
@@ -39,72 +58,28 @@ trade_network = {
 	tile_resource_food_mult = 0.02
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
-	icon_frame = 1
+	icon_frame = 4
 }
 
-foriegn_trade_network = {
+foreign_trade_network = {
 	tile_resource_minerals_mult = 0.02
 	tile_resource_energy_mult = 0.02
 	tile_resource_food_mult = 0.02
 	pop_ethic_xenophile_attraction_mult = 0.03
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
-	icon_frame = 1
+	icon_frame = 4
 }
 
-trade_hub = {
+trade_ship_arrived = {
+	pop_consumer_goods_mult = -0.1
+	
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
-	icon_frame = 1
-}
-
-
-reduced_trade_network_minerals = {
-	tile_resource_minerals_mult = 0.02
-
-	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
-	icon_frame = 1
-}
-
-reduced_trade_network_energy = {
-	tile_resource_energy_mult = 0.02
-
-	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
-	icon_frame = 1
-}
-
-reduced_trade_network_food = {
-	tile_resource_food_mult = 0.02
-
-	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
-	icon_frame = 1
-}
-
-reduced_trade_network = {
-	tile_resource_minerals_mult = 0.02
-	tile_resource_energy_mult = 0.02
-	tile_resource_food_mult = 0.02
-
-	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
-	icon_frame = 1
+	icon_frame = 4
 }
 
 circus_in_town = {
 	pop_happiness = 0.10
 	icon = "gfx/interface/icons/planet_modifiers/pm_dangerous_wildlife.dds"
-	icon_frame = 1
-}
-
-trade_minerals_focus = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
-	icon_frame = 1
-}
-
-trade_energy_focus = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
-	icon_frame = 1
-}
-
-trade_food_focus = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
 	icon_frame = 1
 }
 

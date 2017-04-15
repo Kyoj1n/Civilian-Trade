@@ -24,22 +24,10 @@ planet_event = {
 			limit = {
 				distance = {
 					source = root
-					max_distance = 60
+					max_distance = 30
 					min_distance = 1
 				}
-				or = {
-					not = { 
-						or = {
-							has_modifier = "trade_network" 	
-							has_modifier = "foriegn_trade_network" 	
-						}
-					}
-					root = {
-						has_edict = production_targets								
-						has_edict = capacity_overload					
-					}
-				
-				}
+
 
 				is_colony = yes
 				not = { owner = { has_closed_borders = root.owner } }
@@ -49,9 +37,12 @@ planet_event = {
 					owner = {
 						not = { is_same_value = root.owner }
 					}
+					not = { has_modifier = "foreign_trade_network"
+							has_modifier = "trade_network" 
+					}
 				}
 				add_modifier = {
-					modifier = "foriegn_trade_network"
+					modifier = "foreign_trade_network"
 					days = -1
 				}
 				else = {
@@ -60,6 +51,7 @@ planet_event = {
 							root = {
 								has_edict = capacity_overload
 							}
+							not = { has_modifier = "trade_network_energy" }
 						}
 						add_modifier = {
 							modifier = "trade_network_energy"
@@ -71,6 +63,7 @@ planet_event = {
 							root = {
 								has_edict = production_targets
 							}
+							not = { has_modifier = "trade_network_minerals" }
 						}
 						add_modifier = {
 							modifier = "trade_network_minerals"
@@ -81,11 +74,72 @@ planet_event = {
 					if = {
 						limit = {
 							root = {
-								not = {
-									has_edict = production_targets								
-									has_edict = capacity_overload
+								has_edict = reeducation_campaign
+							}
+							not = { has_modifier = "trade_network_reeducation" }
+						}
+						add_modifier = {
+							modifier = "trade_network_reeducation"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = propaganda
+							}
+							not = { has_modifier = "trade_network_propaganda" }
+						}
+						add_modifier = {
+							modifier = "trade_network_propaganda"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = infrastructure_projects
+							}
+							not = { has_modifier = "trade_network_infrastructure" }
+						}
+						add_modifier = {
+							modifier = "trade_network_infrastructure"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = farming_subsidies
+							}
+							not = { has_modifier = "trade_network_farming" }
+						}
+						add_modifier = {
+							modifier = "trade_network_farming"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								or = {
+									not = {
+										has_edict = production_targets								
+										has_edict = capacity_overload
+										has_edict = reeducation_campaign
+										has_edict = propaganda
+										has_edict = infrastructure_projects
+										has_edict = farming_subsidies
+									}								
 								}
 							}
+
+							not = { has_modifier = "trade_network" 	}			
+														
 						}						
 						add_modifier = {
 							modifier = "trade_network"
@@ -115,21 +169,8 @@ planet_event = {
 			limit = {
 				distance = {
 					source = root
-					max_distance = 60
+					max_distance = 50
 					min_distance = 1
-				}
-				or = {
-					not = { 
-						or = {
-							has_modifier = "trade_network" 	
-							has_modifier = "foriegn_trade_network" 	
-						}
-					}
-					root = {
-						has_edict = production_targets								
-						has_edict = capacity_overload					
-					}
-				
 				}
 
 				is_colony = yes
@@ -140,9 +181,12 @@ planet_event = {
 					owner = {
 						not = { is_same_value = root.owner }
 					}
+					not = { has_modifier = "foreign_trade_network"
+							has_modifier = "trade_network" 
+					}
 				}
 				add_modifier = {
-					modifier = "foriegn_trade_network"
+					modifier = "foreign_trade_network"
 					days = -1
 				}
 				else = {
@@ -151,6 +195,7 @@ planet_event = {
 							root = {
 								has_edict = capacity_overload
 							}
+							not = { has_modifier = "trade_network_energy" }
 						}
 						add_modifier = {
 							modifier = "trade_network_energy"
@@ -162,6 +207,7 @@ planet_event = {
 							root = {
 								has_edict = production_targets
 							}
+							not = { has_modifier = "trade_network_minerals" }
 						}
 						add_modifier = {
 							modifier = "trade_network_minerals"
@@ -172,11 +218,71 @@ planet_event = {
 					if = {
 						limit = {
 							root = {
-								not = {
-									has_edict = production_targets								
-									has_edict = capacity_overload
+								has_edict = reeducation_campaign
+							}
+							not = { has_modifier = "trade_network_reeducation" }
+						}
+						add_modifier = {
+							modifier = "trade_network_reeducation"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = propaganda
+							}
+							not = { has_modifier = "trade_network_propaganda" }
+						}
+						add_modifier = {
+							modifier = "trade_network_propaganda"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = infrastructure_projects
+							}
+							not = { has_modifier = "trade_network_infrastructure" }
+						}
+						add_modifier = {
+							modifier = "trade_network_infrastructure"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = farming_subsidies
+							}
+							not = { has_modifier = "trade_network_farming" }
+						}
+						add_modifier = {
+							modifier = "trade_network_farming"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								or = {
+									not = {
+										has_edict = production_targets								
+										has_edict = capacity_overload
+										has_edict = reeducation_campaign
+										has_edict = propaganda
+										has_edict = infrastructure_projects
+										has_edict = farming_subsidies
+									}								
 								}
 							}
+							not = { has_modifier = "trade_network" 	}			
+
 						}						
 						add_modifier = {
 							modifier = "trade_network"
@@ -206,21 +312,8 @@ planet_event = {
 			limit = {
 				distance = {
 					source = root
-					max_distance = 60
+					max_distance = 70
 					min_distance = 1
-				}
-				or = {
-					not = { 
-						or = {
-							has_modifier = "trade_network" 	
-							has_modifier = "foriegn_trade_network" 	
-						}
-					}
-					root = {
-						has_edict = production_targets								
-						has_edict = capacity_overload					
-					}
-				
 				}
 
 				is_colony = yes
@@ -231,9 +324,12 @@ planet_event = {
 					owner = {
 						not = { is_same_value = root.owner }
 					}
+					not = { has_modifier = "foreign_trade_network"
+							has_modifier = "trade_network" 
+					}
 				}
 				add_modifier = {
-					modifier = "foriegn_trade_network"
+					modifier = "foreign_trade_network"
 					days = -1
 				}
 				else = {
@@ -242,6 +338,7 @@ planet_event = {
 							root = {
 								has_edict = capacity_overload
 							}
+							not = { has_modifier = "trade_network_energy" }
 						}
 						add_modifier = {
 							modifier = "trade_network_energy"
@@ -253,6 +350,7 @@ planet_event = {
 							root = {
 								has_edict = production_targets
 							}
+							not = { has_modifier = "trade_network_minerals" }
 						}
 						add_modifier = {
 							modifier = "trade_network_minerals"
@@ -263,11 +361,71 @@ planet_event = {
 					if = {
 						limit = {
 							root = {
-								not = {
-									has_edict = production_targets								
-									has_edict = capacity_overload
+								has_edict = reeducation_campaign
+							}
+							not = { has_modifier = "trade_network_reeducation" }
+						}
+						add_modifier = {
+							modifier = "trade_network_reeducation"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = propaganda
+							}
+							not = { has_modifier = "trade_network_propaganda" }
+						}
+						add_modifier = {
+							modifier = "trade_network_propaganda"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = infrastructure_projects
+							}
+							not = { has_modifier = "trade_network_infrastructure" }
+						}
+						add_modifier = {
+							modifier = "trade_network_infrastructure"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = farming_subsidies
+							}
+							not = { has_modifier = "trade_network_farming" }
+						}
+						add_modifier = {
+							modifier = "trade_network_farming"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								or = {
+									not = {
+										has_edict = production_targets								
+										has_edict = capacity_overload
+										has_edict = reeducation_campaign
+										has_edict = propaganda
+										has_edict = infrastructure_projects
+										has_edict = farming_subsidies
+									}								
 								}
 							}
+							not = { has_modifier = "trade_network" 	}				
+
 						}						
 						add_modifier = {
 							modifier = "trade_network"
@@ -292,9 +450,14 @@ event = {
 			any_owned_planet = {
 				or = {
 				has_modifier = "trade_network" 	
-				has_modifier = "foriegn_trade_network"
+				has_modifier = "foreign_trade_network"
 				has_modifier = "trade_network_energy"
-				has_modifier = "trade_network_minerals" 				
+				has_modifier = "trade_network_minerals" 
+				has_modifier = "trade_network_energy"
+				has_modifier = "trade_network_reeducation"
+				has_modifier = "trade_network_propaganda"
+				has_modifier = "trade_network_infrastructure"
+				has_modifier = "trade_network_farming"				
 				}
 				
 			}
@@ -311,9 +474,14 @@ event = {
 				any_owned_planet = {
 					or = {
 						has_modifier = "trade_network" 	
-						has_modifier = "foriegn_trade_network"
+						has_modifier = "foreign_trade_network"
 						has_modifier = "trade_network_energy"
 						has_modifier = "trade_network_minerals" 
+						has_modifier = "trade_network_energy"
+						has_modifier = "trade_network_reeducation"
+						has_modifier = "trade_network_propaganda"
+						has_modifier = "trade_network_infrastructure"
+						has_modifier = "trade_network_farming"	
 					}
 				
 				}
@@ -322,15 +490,24 @@ event = {
 				limit = {
 					or = {
 						has_modifier = "trade_network" 	
-						has_modifier = "foriegn_trade_network"
+						has_modifier = "foreign_trade_network"
 						has_modifier = "trade_network_energy"
-						has_modifier = "trade_network_minerals" 						
+						has_modifier = "trade_network_minerals" 
+						has_modifier = "trade_network_energy"
+						has_modifier = "trade_network_reeducation"
+						has_modifier = "trade_network_propaganda"
+						has_modifier = "trade_network_infrastructure"
+						has_modifier = "trade_network_farming"							
 					}
 				}
 				remove_modifier = "trade_network"
-				remove_modifier = "foriegn_trade_network"
+				remove_modifier = "foreign_trade_network"
 				remove_modifier = "trade_network_energy"
 				remove_modifier = "trade_network_minerals"
+				remove_modifier = "trade_network_reeducation"
+				remove_modifier = "trade_network_propaganda"
+				remove_modifier = "trade_network_infrastructure"
+				remove_modifier = "trade_network_farming"
 			}		
 		}
 	}	
