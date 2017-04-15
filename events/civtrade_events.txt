@@ -44,7 +44,7 @@ planet_event = {
 			
 			last_created_fleet = {
 				set_owner = root.owner
-				set_fleet_stance = evasive
+				set_fleet_stance = passive
 				save_event_target_as = trade_fleet
 				set_fleet_flag = civilian_trade_fleet
 				if = {
