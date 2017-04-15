@@ -1,0 +1,557 @@
+############################
+#
+# Civilian Trade Events
+#
+# Written by Kyoj1n
+#
+############################
+
+namespace = civtradebonus
+
+planet_event = {
+	id = civtradebonus.1
+	hide_window = yes
+	location = ROOT
+	
+	trigger = {
+		has_owner = yes
+		owner = { is_country_type = default }
+		has_planet_flag = trade_planet
+		has_planet_flag = small_population
+	}
+	immediate = {
+		every_planet = {
+			limit = {
+				distance = {
+					source = root
+					max_distance = 30
+					min_distance = 1
+				}
+
+
+				is_colony = yes
+				not = { owner = { has_closed_borders = root.owner } }
+			}
+			if = {
+				limit = {
+					owner = {
+						not = { is_same_value = root.owner }
+					}
+					not = { has_modifier = "foreign_trade_network"
+							has_modifier = "trade_network" 
+					}
+				}
+				add_modifier = {
+					modifier = "foreign_trade_network"
+					days = -1
+				}
+				else = {
+					if = {
+						limit = {
+							root = {
+								has_edict = capacity_overload
+							}
+							not = { has_modifier = "trade_network_energy" }
+						}
+						add_modifier = {
+							modifier = "trade_network_energy"
+							days = -1
+						}
+					}
+					if = {
+						limit = {
+							root = {
+								has_edict = production_targets
+							}
+							not = { has_modifier = "trade_network_minerals" }
+						}
+						add_modifier = {
+							modifier = "trade_network_minerals"
+							days = -1
+						}
+
+					}
+					if = {
+						limit = {
+							root = {
+								has_edict = reeducation_campaign
+							}
+							not = { has_modifier = "trade_network_reeducation" }
+						}
+						add_modifier = {
+							modifier = "trade_network_reeducation"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = propaganda
+							}
+							not = { has_modifier = "trade_network_propaganda" }
+						}
+						add_modifier = {
+							modifier = "trade_network_propaganda"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = infrastructure_projects
+							}
+							not = { has_modifier = "trade_network_infrastructure" }
+						}
+						add_modifier = {
+							modifier = "trade_network_infrastructure"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = farming_subsidies
+							}
+							not = { has_modifier = "trade_network_farming" }
+						}
+						add_modifier = {
+							modifier = "trade_network_farming"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								or = {
+									not = {
+										has_edict = production_targets								
+										has_edict = capacity_overload
+										has_edict = reeducation_campaign
+										has_edict = propaganda
+										has_edict = infrastructure_projects
+										has_edict = farming_subsidies
+									}								
+								}
+							}
+
+							not = { has_modifier = "trade_network" 	}			
+														
+						}						
+						add_modifier = {
+							modifier = "trade_network"
+							days = -1
+						}									
+					}						
+					
+				}
+			}
+		}
+	}	
+}
+
+planet_event = {
+	id = civtradebonus.2
+	hide_window = yes
+	location = ROOT
+	
+	trigger = {
+		has_owner = yes
+		owner = { is_country_type = default }
+		has_planet_flag = trade_planet
+		has_planet_flag = medium_population
+	}
+	immediate = {
+		every_planet = {
+			limit = {
+				distance = {
+					source = root
+					max_distance = 50
+					min_distance = 1
+				}
+
+				is_colony = yes
+				not = { owner = { has_closed_borders = root.owner } }
+			}
+			if = {
+				limit = {
+					owner = {
+						not = { is_same_value = root.owner }
+					}
+					not = { has_modifier = "foreign_trade_network"
+							has_modifier = "trade_network" 
+					}
+				}
+				add_modifier = {
+					modifier = "foreign_trade_network"
+					days = -1
+				}
+				else = {
+					if = {
+						limit = {
+							root = {
+								has_edict = capacity_overload
+							}
+							not = { has_modifier = "trade_network_energy" }
+						}
+						add_modifier = {
+							modifier = "trade_network_energy"
+							days = -1
+						}
+					}
+					if = {
+						limit = {
+							root = {
+								has_edict = production_targets
+							}
+							not = { has_modifier = "trade_network_minerals" }
+						}
+						add_modifier = {
+							modifier = "trade_network_minerals"
+							days = -1
+						}
+
+					}
+					if = {
+						limit = {
+							root = {
+								has_edict = reeducation_campaign
+							}
+							not = { has_modifier = "trade_network_reeducation" }
+						}
+						add_modifier = {
+							modifier = "trade_network_reeducation"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = propaganda
+							}
+							not = { has_modifier = "trade_network_propaganda" }
+						}
+						add_modifier = {
+							modifier = "trade_network_propaganda"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = infrastructure_projects
+							}
+							not = { has_modifier = "trade_network_infrastructure" }
+						}
+						add_modifier = {
+							modifier = "trade_network_infrastructure"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = farming_subsidies
+							}
+							not = { has_modifier = "trade_network_farming" }
+						}
+						add_modifier = {
+							modifier = "trade_network_farming"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								or = {
+									not = {
+										has_edict = production_targets								
+										has_edict = capacity_overload
+										has_edict = reeducation_campaign
+										has_edict = propaganda
+										has_edict = infrastructure_projects
+										has_edict = farming_subsidies
+									}								
+								}
+							}
+							not = { has_modifier = "trade_network" 	}			
+
+						}						
+						add_modifier = {
+							modifier = "trade_network"
+							days = -1
+						}									
+					}						
+					
+				}
+			}
+		}
+	}	
+}
+
+planet_event = {
+	id = civtradebonus.3
+	hide_window = yes
+	location = ROOT
+	
+	trigger = {
+		has_owner = yes
+		owner = { is_country_type = default }
+		has_planet_flag = trade_planet
+		has_planet_flag = large_population
+	}
+	immediate = {
+		every_planet = {
+			limit = {
+				distance = {
+					source = root
+					max_distance = 70
+					min_distance = 1
+				}
+
+				is_colony = yes
+				not = { owner = { has_closed_borders = root.owner } }
+			}
+			if = {
+				limit = {
+					owner = {
+						not = { is_same_value = root.owner }
+					}
+					not = { has_modifier = "foreign_trade_network"
+							has_modifier = "trade_network" 
+					}
+				}
+				add_modifier = {
+					modifier = "foreign_trade_network"
+					days = -1
+				}
+				else = {
+					if = {
+						limit = {
+							root = {
+								has_edict = capacity_overload
+							}
+							not = { has_modifier = "trade_network_energy" }
+						}
+						add_modifier = {
+							modifier = "trade_network_energy"
+							days = -1
+						}
+					}
+					if = {
+						limit = {
+							root = {
+								has_edict = production_targets
+							}
+							not = { has_modifier = "trade_network_minerals" }
+						}
+						add_modifier = {
+							modifier = "trade_network_minerals"
+							days = -1
+						}
+
+					}
+					if = {
+						limit = {
+							root = {
+								has_edict = reeducation_campaign
+							}
+							not = { has_modifier = "trade_network_reeducation" }
+						}
+						add_modifier = {
+							modifier = "trade_network_reeducation"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = propaganda
+							}
+							not = { has_modifier = "trade_network_propaganda" }
+						}
+						add_modifier = {
+							modifier = "trade_network_propaganda"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = infrastructure_projects
+							}
+							not = { has_modifier = "trade_network_infrastructure" }
+						}
+						add_modifier = {
+							modifier = "trade_network_infrastructure"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								has_edict = farming_subsidies
+							}
+							not = { has_modifier = "trade_network_farming" }
+						}
+						add_modifier = {
+							modifier = "trade_network_farming"
+							days = -1
+						}
+
+					}					
+					if = {
+						limit = {
+							root = {
+								or = {
+									not = {
+										has_edict = production_targets								
+										has_edict = capacity_overload
+										has_edict = reeducation_campaign
+										has_edict = propaganda
+										has_edict = infrastructure_projects
+										has_edict = farming_subsidies
+									}								
+								}
+							}
+							not = { has_modifier = "trade_network" 	}				
+
+						}						
+						add_modifier = {
+							modifier = "trade_network"
+							days = -1
+						}									
+					}						
+					
+				}
+			}
+		}
+	}	
+}
+
+event = {
+	id = civtradebonus.4
+	hide_window = yes
+	location = ROOT
+	is_triggered_only = yes
+	trigger = {
+		any_country = {
+				is_country_type = default
+			any_owned_planet = {
+				or = {
+				has_modifier = "trade_network" 	
+				has_modifier = "foreign_trade_network"
+				has_modifier = "trade_network_energy"
+				has_modifier = "trade_network_minerals" 
+				has_modifier = "trade_network_energy"
+				has_modifier = "trade_network_reeducation"
+				has_modifier = "trade_network_propaganda"
+				has_modifier = "trade_network_infrastructure"
+				has_modifier = "trade_network_farming"				
+				}
+				
+			}
+		
+		}
+	
+			
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				any_owned_planet = {
+					or = {
+						has_modifier = "trade_network" 	
+						has_modifier = "foreign_trade_network"
+						has_modifier = "trade_network_energy"
+						has_modifier = "trade_network_minerals" 
+						has_modifier = "trade_network_energy"
+						has_modifier = "trade_network_reeducation"
+						has_modifier = "trade_network_propaganda"
+						has_modifier = "trade_network_infrastructure"
+						has_modifier = "trade_network_farming"	
+					}
+				
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					or = {
+						has_modifier = "trade_network" 	
+						has_modifier = "foreign_trade_network"
+						has_modifier = "trade_network_energy"
+						has_modifier = "trade_network_minerals" 
+						has_modifier = "trade_network_energy"
+						has_modifier = "trade_network_reeducation"
+						has_modifier = "trade_network_propaganda"
+						has_modifier = "trade_network_infrastructure"
+						has_modifier = "trade_network_farming"							
+					}
+				}
+				remove_modifier = "trade_network"
+				remove_modifier = "foreign_trade_network"
+				remove_modifier = "trade_network_energy"
+				remove_modifier = "trade_network_minerals"
+				remove_modifier = "trade_network_reeducation"
+				remove_modifier = "trade_network_propaganda"
+				remove_modifier = "trade_network_infrastructure"
+				remove_modifier = "trade_network_farming"
+			}		
+		}
+	}	
+}
+# add minerals for when a mineral ship arrives at a planet
+country_event = {
+	id = civtradebonus.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	immediate = {
+		add_minerals = 10
+	}	
+}
+# add energy for when a energy ship arrives at a planet
+country_event = {
+	id = civtradebonus.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	immediate = {
+		add_energy = 10
+	}	
+}
+
+country_event = {
+	id = civtradebonus.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROMFROM.fleet = {
+			has_fleet_flag = civilian_trade_fleet
+		}
+	}
+	
+	immediate = {
+		THIS = {
+			add_minerals = 50
+			add_energy = 50
+		}
+	}
+}
