@@ -37,12 +37,10 @@ planet_event = {
 					type = living_standard_normal
 				}				
 			}
-			is_enslaved = no
 			or = {
 			has_citizenship_type = { type = citizenship_full }
 			has_citizenship_type = { type = citizenship_limited }
-			has_citizenship_type = { type = citizenship_slavery }
-			has_citizenship_type = { type = citizenship_purge }
+			has_citizenship_type = { type = citizenship_caste_system }
 			}
 			has_migration_control = no
 		}
@@ -53,7 +51,7 @@ planet_event = {
 			save_event_target_as = home_country
 		}
 		root = {
-			set_timed_planet_flag = { flag = trader_out days = 15 }		
+			set_timed_planet_flag = { flag = trader_out days = 30 }		
 		}
 		if = {
 			limit = {
@@ -147,7 +145,6 @@ planet_event = {
 												is_hostile = root.owner
 											}
 										}
-									
 									}
 									any_planet = {
 										is_colony = yes
@@ -156,7 +153,7 @@ planet_event = {
 								    }		
 									distance = {
 										source = PREV
-										max_distance = 30
+										max_distance = 80
 										min_distance = 0
 									}
 								}	
@@ -269,12 +266,15 @@ planet_event = {
 	hide_window = yes
 	location = ROOT
 	trigger = {
-		any_pop = {
-			member_of_faction = yes
-			pop_faction = {
-				is_pop_faction_type = prosperity
-			}
+		root = {
+			any_pop = {
+				member_of_faction = yes
+				pop_faction = {
+					is_pop_faction_type = prosperity
+				}
+			}		
 		}
+
 	}
 	
 	immediate = {
@@ -311,12 +311,10 @@ planet_event = {
 					type = living_standard_normal
 				}				
 			}
-			is_enslaved = no
 			or = {
 			has_citizenship_type = { type = citizenship_full }
 			has_citizenship_type = { type = citizenship_limited }
-			has_citizenship_type = { type = citizenship_slavery }
-			has_citizenship_type = { type = citizenship_purge }
+			has_citizenship_type = { type = citizenship_caste_system }
 			}
 			has_migration_control = no
 		}
@@ -371,14 +369,48 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		 days = 30
+		 days = 60
 	}
 	
 	immediate = {
+		every_country = {
+			limit = { 
+				is_country_type = default				
+			}
+			set_variable = {
+				which = num_traders
+				value = 0
+			}
+		}
+		root = {
+			every_owned_ship = {
+				limit = {
+					OR = {
+						is_ship_size = civilian_trade_freighter
+						is_ship_size = civilian_trade_tanker
+					}
+				}
+				root = {
+					change_variable = {
+					   which = num_traders
+					   value = 1
+					}					
+				}
+			}		
+		}
 		random_country = {
+			limit = {
+				check_variable = {
+					which = num_traders
+					value < 26
+				}
+			}
 			random_planet = {
 				limit = {
 					has_planet_flag = trade_planet
+					not = {
+						has_planet_flag = trader_out
+					}
 				}
 				random_list = {
 					10 = { }
@@ -386,6 +418,7 @@ country_event = {
 				}
 			}
 		}
+	
 	}
 }
 

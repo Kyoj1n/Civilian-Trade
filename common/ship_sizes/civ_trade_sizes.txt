@@ -52,7 +52,7 @@ civilian_trade_freighter = {
 	
 	is_designable = no
 	
-	required_component_set = "ftl_civilian_components"
+	required_component_set = "ftl_components"
 	required_component_set = "thruster_components"
 }
 
@@ -83,6 +83,6 @@ civilian_trade_tanker = {
 	
 	is_designable = no
 	
-	required_component_set = "ftl_civilian_components"
+	required_component_set = "ftl_components"
 	required_component_set = "thruster_components"
 }

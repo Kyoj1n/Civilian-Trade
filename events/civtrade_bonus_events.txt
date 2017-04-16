@@ -25,7 +25,7 @@ planet_event = {
 				distance = {
 					source = root
 					max_distance = 30
-					min_distance = 1
+					min_distance = 0
 				}
 
 
@@ -170,7 +170,7 @@ planet_event = {
 				distance = {
 					source = root
 					max_distance = 50
-					min_distance = 1
+					min_distance = 0
 				}
 
 				is_colony = yes
@@ -313,7 +313,7 @@ planet_event = {
 				distance = {
 					source = root
 					max_distance = 70
-					min_distance = 1
+					min_distance = 0
 				}
 
 				is_colony = yes
@@ -521,7 +521,7 @@ country_event = {
 
 	}
 	immediate = {
-		add_minerals = 10
+		add_minerals = 5
 	}	
 }
 # add energy for when a energy ship arrives at a planet
@@ -533,7 +533,7 @@ country_event = {
 
 	}
 	immediate = {
-		add_energy = 10
+		add_energy = 5
 	}	
 }
 

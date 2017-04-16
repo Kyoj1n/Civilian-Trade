@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_polish:
 
  #############################
  # Civilian Trade Events
@@ -64,6 +64,6 @@
  war_demand_trade_sanctions_tooltip_content:1 "[parameter:country.GetName] will have sanctions put on their trade network, restricting trade for 10 years and dampening its effects for 20."
  war_demand_trade_sanctions_tooltip_proper_header:0 "$war_demand_trade_sanctions_header$"
  war_demand_trade_sanctions_tooltip_proper_content:1 "$war_demand_trade_sanctions_tooltip_content$"
-
+ 
  SMALL_CIVILIAN_FISSION_REACTOR:0 "Civilian Class Fission Reactor"
  SMALL_CIVILIAN_FISSION_REACTOR_DESC:0 "This energy source generates power through induced fission, but it also produces harmful nuclear waste. Civilian Component"
