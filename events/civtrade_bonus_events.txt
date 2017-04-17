@@ -24,8 +24,8 @@ planet_event = {
 			limit = {
 				distance = {
 					source = root
-					max_distance = 30
-					min_distance = 0
+					max_distance = 40
+					min_distance = 1
 				}
 
 
@@ -37,10 +37,12 @@ planet_event = {
 					owner = {
 						not = { is_same_value = root.owner }
 					}
-					not = { has_modifier = "foreign_trade_network"
-							has_modifier = "trade_network" 
+					not = {
+						has_modifier = "foreign_trade_network"							
 					}
+					
 				}
+				remove_modifier = "trade_network"
 				add_modifier = {
 					modifier = "foreign_trade_network"
 					days = -1
@@ -138,7 +140,10 @@ planet_event = {
 								}
 							}
 
-							not = { has_modifier = "trade_network" 	}			
+							not = { 
+								has_modifier = "trade_network" 	
+								has_modifier = "foreign_trade_network"
+								}			
 														
 						}						
 						add_modifier = {
@@ -170,7 +175,7 @@ planet_event = {
 				distance = {
 					source = root
 					max_distance = 50
-					min_distance = 0
+					min_distance = 1
 				}
 
 				is_colony = yes
@@ -181,10 +186,12 @@ planet_event = {
 					owner = {
 						not = { is_same_value = root.owner }
 					}
-					not = { has_modifier = "foreign_trade_network"
-							has_modifier = "trade_network" 
+					not = {
+						has_modifier = "foreign_trade_network"							
 					}
+
 				}
+				remove_modifier = "trade_network"
 				add_modifier = {
 					modifier = "foreign_trade_network"
 					days = -1
@@ -281,7 +288,10 @@ planet_event = {
 									}								
 								}
 							}
-							not = { has_modifier = "trade_network" 	}			
+							not = { 
+								has_modifier = "trade_network" 	
+								has_modifier = "foreign_trade_network"
+								}			
 
 						}						
 						add_modifier = {
@@ -313,7 +323,7 @@ planet_event = {
 				distance = {
 					source = root
 					max_distance = 70
-					min_distance = 0
+					min_distance = 1
 				}
 
 				is_colony = yes
@@ -324,10 +334,12 @@ planet_event = {
 					owner = {
 						not = { is_same_value = root.owner }
 					}
-					not = { has_modifier = "foreign_trade_network"
-							has_modifier = "trade_network" 
+					not = {
+						has_modifier = "foreign_trade_network"							
 					}
+
 				}
+				remove_modifier = "trade_network"
 				add_modifier = {
 					modifier = "foreign_trade_network"
 					days = -1
@@ -424,7 +436,10 @@ planet_event = {
 									}								
 								}
 							}
-							not = { has_modifier = "trade_network" 	}				
+							not = { 
+								has_modifier = "trade_network" 	
+								has_modifier = "foreign_trade_network"
+								}				
 
 						}						
 						add_modifier = {

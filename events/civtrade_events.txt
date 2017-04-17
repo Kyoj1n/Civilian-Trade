@@ -18,32 +18,32 @@ planet_event = {
 		}
 		has_planet_flag = trade_planet	
 		not = { has_planet_flag = trader_out }
-		any_pop = {
-			member_of_faction = yes
-			pop_faction = {
-				is_pop_faction_type = prosperity
-			}
-			or = {
-				has_living_standard = {
-					type = living_standard_utopian
-				}
-				has_living_standard = {
-					type = living_standard_good
-				}
-				has_living_standard = {
-					type = living_standard_normal
-				}	
-				has_living_standard = {
-					type = living_standard_normal
-				}				
-			}
-			or = {
-			has_citizenship_type = { type = citizenship_full }
-			has_citizenship_type = { type = citizenship_limited }
-			has_citizenship_type = { type = citizenship_caste_system }
-			}
-			has_migration_control = no
-		}
+		# any_pop = {
+			# member_of_faction = yes
+			# pop_faction = {
+				# is_pop_faction_type = prosperity
+			# }
+			# or = {
+				# has_living_standard = {
+					# type = living_standard_utopian
+				# }
+				# has_living_standard = {
+					# type = living_standard_good
+				# }
+				# has_living_standard = {
+					# type = living_standard_normal
+				# }	
+				# has_living_standard = {
+					# type = living_standard_normal
+				# }				
+			# }
+			# or = {
+			# has_citizenship_type = { type = citizenship_full }
+			# has_citizenship_type = { type = citizenship_limited }
+			# has_citizenship_type = { type = citizenship_caste_system }
+			# }
+			# has_migration_control = no
+		# }
 	}
 	is_triggered_only = yes
 	immediate = {
@@ -72,6 +72,7 @@ planet_event = {
 				set_fleet_stance = passive
 				save_event_target_as = trade_fleet
 				set_fleet_flag = civilian_trade_fleet
+				set_timed_fleet_flag = { flag = times_up days 30 } 
 				if = {
 					random_list = { 
 						50 = { create_ship_design = {
@@ -266,13 +267,14 @@ planet_event = {
 	hide_window = yes
 	location = ROOT
 	trigger = {
-		root = {
-			any_pop = {
-				member_of_faction = yes
-				pop_faction = {
-					is_pop_faction_type = prosperity
-				}
-			}		
+		has_owner = yes
+		owner = {
+			is_country_type = default
+			any_owned_planet = {
+				is_capital = no
+				is_colony = yes
+			}
+		
 		}
 
 	}
@@ -292,35 +294,36 @@ planet_event = {
 	location = ROOT
 	
 	trigger = {
-		any_pop = {
-			member_of_faction = yes
-			pop_faction = {
-				is_pop_faction_type = prosperity
-			}
-			or = {
-				has_living_standard = {
-					type = living_standard_utopian
-				}
-				has_living_standard = {
-					type = living_standard_good
-				}
-				has_living_standard = {
-					type = living_standard_normal
-				}	
-				has_living_standard = {
-					type = living_standard_normal
-				}				
-			}
-			or = {
-			has_citizenship_type = { type = citizenship_full }
-			has_citizenship_type = { type = citizenship_limited }
-			has_citizenship_type = { type = citizenship_caste_system }
-			}
-			has_migration_control = no
-		}
+		# any_pop = {
+			# member_of_faction = yes
+			# pop_faction = {
+				# is_pop_faction_type = prosperity
+			# }
+			# or = {
+				# has_living_standard = {
+					# type = living_standard_utopian
+				# }
+				# has_living_standard = {
+					# type = living_standard_good
+				# }
+				# has_living_standard = {
+					# type = living_standard_normal
+				# }	
+				# has_living_standard = {
+					# type = living_standard_normal
+				# }				
+			# }
+			# or = {
+			# has_citizenship_type = { type = citizenship_full }
+			# has_citizenship_type = { type = citizenship_limited }
+			# has_citizenship_type = { type = citizenship_caste_system }
+			# }
+			# has_migration_control = no
+		# }
 		count_pops = {
 			count > 5
 		}
+		has_planet_flag = trade_planet
 	}
 	
 	immediate = {
@@ -490,5 +493,34 @@ country_event = {
 		}
 	
 	}
-
 }
+
+
+fleet_event = {
+	id = civtrade.7
+	hide_window = yes
+	
+	trigger = {
+		or = {
+			is_ship_size = civilian_trade_freighter				
+			is_ship_size = civilian_trade_tanker	
+		}
+		not = { has_fleet_flag = times_up }
+		
+	}
+	
+	
+	
+	immediate = {
+		this = {
+
+			delete_fleet = this
+						
+						
+		}
+						
+	}
+}	
+		
+	
+

@@ -75,3 +75,12 @@ French: English
 Russian: English
 Brazilian: English
 Polish: English
+
+Important for removing the mod! 
+
+Pause the game.
+Open the console " ` " 
+type in " event civtrade.66 "
+Hit enter and all the trade ships should disappear. Then just save a reload. 
+
+简体中文版 - Complete > Download -> http://steamcommunity.com/sharedfiles/filedetails/?id=751697370

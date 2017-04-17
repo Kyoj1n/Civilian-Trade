@@ -14,7 +14,7 @@
  trade_network:0 "Trade Network"
  trade_network_desc:0 "A nearby plant has established a trade network."
 
- foreign_trade_network:0 "foreign Trade Network"
+ foreign_trade_network:0 "Foreign Trade Network"
  foreign_trade_network_desc:0 "A nearby plant from another empire has established a trade network."
 
  trade_network_minerals:0 "Trade Network Minerals"
