@@ -18,6 +18,12 @@ planet_event = {
 		}
 		has_planet_flag = trade_planet	
 		not = { has_planet_flag = trader_out }
+		owner = {
+			check_variable = {
+				which = num_traders
+				value < 20
+			}
+		}
 		# any_pop = {
 			# member_of_faction = yes
 			# pop_faction = {
@@ -384,8 +390,7 @@ country_event = {
 				which = num_traders
 				value = 0
 			}
-		}
-		root = {
+			save_event_target_as = has_traders
 			every_owned_ship = {
 				limit = {
 					OR = {
@@ -393,14 +398,17 @@ country_event = {
 						is_ship_size = civilian_trade_tanker
 					}
 				}
-				root = {
+				event_target:has_traders = {
 					change_variable = {
 					   which = num_traders
 					   value = 1
 					}					
 				}
 			}		
+			
 		}
+
+		
 		random_country = {
 			limit = {
 				check_variable = {
@@ -483,7 +491,7 @@ country_event = {
 						is_ship_size = civilian_trade_tanker	
 					}				
 				}
-
+										
 				fleet = {
 					delete_fleet = this
 				}
@@ -491,7 +499,6 @@ country_event = {
 			}
 		
 		}
-	
 	}
 }
 
@@ -512,15 +519,60 @@ fleet_event = {
 	
 	
 	immediate = {
-		this = {
-
-			delete_fleet = this
-						
-						
-		}
-						
-	}
+		delete_fleet = this								
+	}			
 }	
-		
-	
 
+# country_event = {
+	# id = civtrade.55
+	# hide_window = yes
+	
+	# trigger = {
+	
+	# }
+	# is_triggered_only = yes
+	
+	# immediate = {
+		# every_country = {
+			# every_owned_ship = {
+				# limit = {
+					# or = {
+						# is_ship_size = civilian_trade_freighter				
+						# is_ship_size = civilian_trade_tanker	
+					# }				
+				# }
+										
+			# fleet = {
+				# if = {
+					# limit = {
+						# leader = {
+							# leader_class = scientist
+						# }					
+					# }
+					# kill_leader = { type = scientist show_notification = no }				
+				# }
+				# if = {
+					# limit = {
+						# leader = {
+							# leader_class = admiral
+						# }					
+					# }
+					# kill_leader = { type = admiral show_notification = no }				
+				# }
+				# if = {
+					# limit = {
+						# leader = {
+							# leader_class = general
+						# }					
+					# }
+					# kill_leader = { type = general show_notification = no }				
+				# }
+
+
+			# }
+			
+			# }
+		
+		# }
+	# }
+# }
