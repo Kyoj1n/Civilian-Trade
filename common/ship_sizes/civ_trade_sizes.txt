@@ -28,6 +28,7 @@
 # Civilian Trader Freighter
 civilian_trade_freighter = {
 	graphical_culture = no
+
 	entity = cargo_transport_containers_entity
 	max_speed = 3.75
 	acceleration = 0.3
@@ -59,6 +60,7 @@ civilian_trade_freighter = {
 # Civilian Trade Tanker
 civilian_trade_tanker = {
 	graphical_culture = no
+
 	entity = cargo_transport_tanker_entity
 	max_speed = 3.75
 	acceleration = 0.3

@@ -20,7 +20,7 @@ ship_design = {
 ship_design = {
 	name = "T2"
 	ship_size = civilian_trade_tanker
-	
+
 	section = {
 		template = "civilian_tanker_section"
 		slot = "mid"

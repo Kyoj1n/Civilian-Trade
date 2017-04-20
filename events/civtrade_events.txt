@@ -24,6 +24,18 @@ planet_event = {
 				value < 20
 			}
 		}
+		any_system = {
+			any_planet = { is_same_value = root }
+			any_ship_in_system = {
+				this.owner = {
+					not = {
+						is_hostile = root.owner
+					}				
+				}
+
+			}		
+		}
+
 		# any_pop = {
 			# member_of_faction = yes
 			# pop_faction = {
@@ -78,7 +90,7 @@ planet_event = {
 				set_fleet_stance = passive
 				save_event_target_as = trade_fleet
 				set_fleet_flag = civilian_trade_fleet
-				set_timed_fleet_flag = { flag = times_up days 30 } 
+				set_timed_fleet_flag = { flag = times_up days = 30 } 
 				if = {
 					random_list = { 
 						50 = { create_ship_design = {
@@ -147,10 +159,10 @@ planet_event = {
 								trigger = {
 									id = "civtrade.1.trigger.2"
 									any_ship_in_system = {
-										not = {
-											owner = {
+										this.owner = {
+											not = {
 												is_hostile = root.owner
-											}
+											}				
 										}
 									}
 									any_planet = {
@@ -523,56 +535,61 @@ fleet_event = {
 	}			
 }	
 
-# country_event = {
-	# id = civtrade.55
-	# hide_window = yes
+fleet_event = {
+	id = civtrade.55
+	hide_window = yes
 	
-	# trigger = {
-	
-	# }
-	# is_triggered_only = yes
-	
-	# immediate = {
-		# every_country = {
-			# every_owned_ship = {
-				# limit = {
-					# or = {
-						# is_ship_size = civilian_trade_freighter				
-						# is_ship_size = civilian_trade_tanker	
-					# }				
-				# }
-										
-			# fleet = {
-				# if = {
-					# limit = {
-						# leader = {
-							# leader_class = scientist
-						# }					
-					# }
-					# kill_leader = { type = scientist show_notification = no }				
-				# }
-				# if = {
-					# limit = {
-						# leader = {
-							# leader_class = admiral
-						# }					
-					# }
-					# kill_leader = { type = admiral show_notification = no }				
-				# }
-				# if = {
-					# limit = {
-						# leader = {
-							# leader_class = general
-						# }					
-					# }
-					# kill_leader = { type = general show_notification = no }				
-				# }
+	trigger = {
+				leader = {
+					leader_class = scientist
+				}
 
-
-			# }
+				leader = {
+					leader_class = admiral
+				}					
 			
-			# }
+
+				leader = {
+					leader_class = general
+				}					
+				exists = leader
+
+
+
+				
+	}
+	is_triggered_only = yes
+	
+	immediate = {						
+		if = {
+			limit = {
+				leader = {
+					leader_class = scientist
+				}					
+			}
+			kill_leader = { type = scientist show_notification = no }				
+		}
+		if = {
+			limit = {
+				leader = {
+					leader_class = admiral
+				}					
+			}
+			kill_leader = { type = admiral show_notification = no }				
+		}
+		if = {
+			limit = {
+				leader = {
+					leader_class = general
+				}					
+			}
+			kill_leader = { type = general show_notification = no }				
+		}
+
+
+			
+			
+	}
 		
-		# }
-	# }
-# }
+}
+
