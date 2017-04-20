@@ -158,13 +158,13 @@ planet_event = {
 							find_random_system = {
 								trigger = {
 									id = "civtrade.1.trigger.2"
-									any_ship_in_system = {
-										this.owner = {
-											not = {
-												is_hostile = root.owner
-											}				
-										}
-									}
+									# any_ship_in_system = {
+										# this.owner = {
+											# not = {
+												# is_hostile = root.owner
+											# }				
+										# }
+									# }
 									any_planet = {
 										is_colony = yes
 										exists = controller
