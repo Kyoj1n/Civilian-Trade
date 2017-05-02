@@ -144,7 +144,6 @@ planet_event = {
 					design = last_created_design
 					graphical_culture = "pirate_01"
 				}				
-				assign_leader = last_created_leader
 				set_location = ROOT
 					queue_actions = {	
 						repeat = {
