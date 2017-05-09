@@ -49,7 +49,7 @@ civilian_trade_freighter = {
 	icon_frame = 2
 	base_buildtime = 60	
 	is_civilian = yes
-	class = shipclass_military
+	class = shipclass_transport
 	
 	is_designable = no
 	
@@ -81,7 +81,7 @@ civilian_trade_tanker = {
 	icon_frame = 2
 	base_buildtime = 60	
 	is_civilian = yes
-	class = shipclass_military
+	class = shipclass_transport
 	
 	is_designable = no
 	

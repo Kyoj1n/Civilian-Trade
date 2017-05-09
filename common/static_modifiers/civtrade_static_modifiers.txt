@@ -39,7 +39,7 @@ trade_network_propaganda = {
 }
 
 trade_network_farming = {
-	pop_growth_req_mult = -0.03
+	pop_growth_speed = -0.03
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
 	icon_frame = 7
